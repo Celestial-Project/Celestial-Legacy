@@ -1,0 +1,50 @@
+{
+    "hello": {
+        "response": "Hello!",
+        "list_of_words": ["hello", "greetings", "hi", "sup", "hey", "heyo"],
+        "is_single_response": true,
+        "required_word": [] 
+    },
+
+    "fine": {
+        "response": "I'm fine, how about you?",
+        "list_of_words": ["how", "are", "you", "doing"],
+        "is_single_response": false,
+        "required_word": ["how"] 
+    },
+
+    "thanks": {
+        "response": "Thank you!",
+        "list_of_words": ["i", "love", "this", "bot"],
+        "is_single_response": false,
+        "required_word": ["love", "bot"] 
+    },
+    
+    "ask_eating": {
+        "response": "I don't like eating anything because I'm a bot obviously!",
+        "list_of_words": ["what", "you", "eat"],
+        "is_single_response": false,
+        "required_word": ["you", "eat"] 
+    },
+
+    "advice": {
+        "response": "If I were you, I would go to the internet and type exactly what you wrote there!",
+        "list_of_words": ["give", "advice"],
+        "is_single_response": false,
+        "required_word": ["advice"] 
+    },
+
+    "ask_robot": {
+        "response": "Yes I'm a robot, but I’m a good one. Let me prove it. How can I help you?",
+        "list_of_words": ["are", "you", "a", "robot", "bot", "ai"],
+        "is_single_response": false,
+        "required_word": []
+    },
+
+    "who_are_you": {
+        "response": "I'm Celestial! I'm a discord chat bot who can talk with you.",
+        "list_of_words": ["who", "are", "you"],
+        "is_single_response": false,
+        "required_word": ["who", "you"] 
+    }
+}
