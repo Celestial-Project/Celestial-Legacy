@@ -1,5 +1,4 @@
 import re
-import webbrowser as wb
 import random
 import json
 
