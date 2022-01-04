@@ -13,7 +13,6 @@ You can talk to the bot by DM the bot or invite the bot to your server and type
 ```
 
 to send your message to the bot.
-
 ### Examples
 
 <img src = https://github.com/StrixzIV/Celestial/raw/master/Preview.png />
@@ -30,11 +29,11 @@ pip install nextcord
 
 ## Contributions
 
-You can contribute to this project by updating the <b href = https://github.com/StrixzIV/Celestial/blob/master/responses.json>responses.json</b>
+You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)**
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
-* <h4 href = https://github.com/StrixzIV/Celestial/blob/master/LICENSE>MIT License</h4>
+* [MIT License](https://github.com/StrixzIV/Celestial/blob/master/LICENSE)
