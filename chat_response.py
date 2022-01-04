@@ -3,7 +3,7 @@ import webbrowser as wb
 import random
 import json
 
-with open('Discord-Bots/Celestial/responses.json', 'r', encoding = 'utf-8') as f:
+with open('./responses.json', 'r', encoding = 'utf-8') as f:
     res_data = json.load(f)
 
 def msg_probability(input_text: str, reconized_word: str, single_response: bool = False, required_words: list[str] = []) -> int:

@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from nextcord.ext import commands
 from chat_response import get_response
 
@@ -13,4 +15,6 @@ async def answer(ctx, *msg):
     await ctx.send(get_response(' '.join(list(msg))))
         
         
-client.run('OTI3NTczNTU2OTYxODY5ODI1.YdMMMQ.wq4bO1jk1b_CKpClr03gSVjbw18')
+load_dotenv()
+
+client.run(os.getenv('TOKEN'))
