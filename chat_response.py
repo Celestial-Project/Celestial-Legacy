@@ -11,7 +11,7 @@ with open('./responses_th.json', 'r', encoding = 'utf-8') as f:
 
 en_badwords = ['dick', 'shit', 'pussy', 'fucker', 'fuck', 'ass', 'noob', 
                'suck', 'bitch', 'wank', 'wanker', 'cock', 'crap', 'bastard',
-               'cunt', 'asshole', 'prick', 'dickhead', 'dumb', 'stupid']
+               'cunt', 'asshole', 'prick', 'dickhead', 'dumb', 'stupid', 'gay', 'gei']
 
 th_badwords = ["ควย", "สัส", "หี", "เย็ด", "พ่อง", "กาก", "สวะ", "สถุน", 
                "กะหรี่", "อีดอก", "ระยำ", "จัญไร", "เสนียด", "ส้นตีน", "ดักดาน"]
