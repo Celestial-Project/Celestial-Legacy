@@ -19,21 +19,21 @@ to send your message to the bot.
 
 ## Dependencies
 
-this project uses nextcord as a main dependencies as a wrapper for Discord API.
+this project uses nextcord as a main dependencies as a wrapper for Discord API and PyThaiNLP for word tokenizing.
 
 Download the dependencies by using command:
 
 ```
-pip install nextcord
+pip install nextcord pythainlp
 ```
 
 ## Contributions
 
-You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)**
+You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)** and **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses_th.json)**
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
-* [MIT License](https://github.com/StrixzIV/Celestial/blob/master/LICENSE)
+* **[MIT License](https://github.com/StrixzIV/Celestial/blob/master/LICENSE)**
