@@ -9,7 +9,7 @@
 
     "fine_th":
     {
-        "response": "หนูสบายดีแล้วคุณหละ",
+        "response": "หนูสบายดีค่ะ แล้วคุณพี่ล่ะ?",
         "list_of_words": ["เป็น", "ไง", "บ้าง"],
         "is_single_response": false,
         "required_word": ["เป็น"] 
@@ -17,7 +17,7 @@
 
     "thanks_th":
     {
-        "response": "ขอบคุณคะ",
+        "response": "ขอบคุณค่ะ!",
         "list_of_words": ["ฉัน", "ชอบ", "รัก", "บอด", "บอต", "บอท"],
         "is_single_response": false,
         "required_word": [] 
@@ -25,15 +25,15 @@
     
     "ask_eating_th":
     {
-        "response": "หนูไม่ค่อยชอบกินอะไรก็หนูเป็นบอทนี่เนอะ",
-        "list_of_words": ["กิน", "ไร", "ยัง", "อะไร"],
+        "response": "หนูไม่กินอะไรหรอกค่ะ ก็หนูเป็นบอทนี่เนอะ",
+        "list_of_words": ["กิน", "ยัง", "อะไร", "บ้าง"],
         "is_single_response": false,
-        "required_word": ["กิน", "ไร", "อะไร"] 
+        "required_word": ["กิน", "ไร", "บ้าง"] 
     },
 
     "advice_th":
     {
-        "response": "ก็นะถ้าหนูเป็นคุณ หนูจะเข้าไปเสิร์ชในกูเกิล",
+        "response": "ถ้าหนูเป็นพี่ หนูจะเข้าไปเสิร์ชในกูเกิ้ลเอาน่าจะไวกว่านะ",
         "list_of_words": ["ให้", "คำแนะนำ"],
         "is_single_response": false,
         "required_word": ["คำแนะนำ"] 
@@ -41,7 +41,7 @@
 
     "ask_robot_th":
     {
-        "response": "ใช่หนูเป็นบอท แต่หนูเป็นบอทที่ดีนะหนูจะแสดงให้ดูเอง แล้วมีอะไรช่วยไหมคะ",
+        "response": "ใช่ค่ะ หนูเป็นบอท แต่หนูเป็นบอทที่ดีนะ! มีอะไรช่วยไหมคะ?",
         "list_of_words": ["เธอ", "หนู", "เป็น", "หุ่นยนต์", "บอด", "บอต", "บอท", "ai"],
         "is_single_response": false,
         "required_word": []
@@ -49,10 +49,10 @@
 
     "who_are_you_th":
     {
-        "response": "หนูCelestial! หนูเป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคน",
+        "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
         "list_of_words": ["เธอ", "หนู", "เป็น", "ใคร"],
         "is_single_response": false,
         "required_word": ["เป็น", "ใคร"] 
-    },
+    }
 
 }
