@@ -1,9 +1,18 @@
-import re
 import random
 import json
+import pythainlp
 
 with open('./responses.json', 'r', encoding = 'utf-8') as f:
-    res_data = json.load(f)
+    res_en = json.load(f)
+    
+with open('./responses_th.json', 'r', encoding = 'utf-8') as f:
+    res_th = json.load(f)
+    
+
+def merge_dict(dict1, dict2):
+    res = {**dict1, **dict2}
+    return res
+
 
 def msg_probability(input_text: str, reconized_word: str, single_response: bool = False, required_words: list[str] = []) -> int:
     message_certainty = 0
@@ -30,6 +39,8 @@ def msg_probability(input_text: str, reconized_word: str, single_response: bool 
 def check_all_msg(message: str):
     highest_prob_list = {}
     
+    res_data = merge_dict(res_en, res_th)
+    
     def response(bot_response: str, list_of_words: list[str], single_response: bool = False, required_words: list[str] = []):
         nonlocal highest_prob_list
         highest_prob_list[bot_response] = msg_probability(message, list_of_words, single_response, required_words)
@@ -50,6 +61,7 @@ def check_all_msg(message: str):
 
 
 def get_response(input_text: str) -> str:
-    split_text = re.split(r'\s+|[,;?!.-]\s*', input_text.lower())
+    split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False)
+    split_text = [e.lower() for e in split_text]
     response = check_all_msg(split_text)
     return response

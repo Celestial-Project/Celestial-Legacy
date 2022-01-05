@@ -1,0 +1,8 @@
+{
+    "hello_th": {
+        "response": "สวัสดีค่ะ!",
+        "list_of_words": ["สวัสดี", "ดีจ้า", "ฮัลโหล"],
+        "is_single_response": true,
+        "required_word": [] 
+    }
+}

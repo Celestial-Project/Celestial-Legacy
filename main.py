@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from nextcord.ext import commands
 from chat_response import get_response
+from dotenv import load_dotenv
 
 client = commands.Bot(command_prefix = '<usr')
 
