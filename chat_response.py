@@ -9,6 +9,14 @@ with open('./responses_th.json', 'r', encoding = 'utf-8') as f:
     res_th = json.load(f)
     
 
+en_badwords = ['dick', 'shit', 'pussy', 'fucker', 'fuck', 'ass', 'noob', 
+               'suck', 'bitch', 'wank', 'wanker', 'cock', 'crap', 'bastard',
+               'cunt', 'asshole', 'prick', 'dickhead', 'dumb', 'stupid']
+
+th_badwords = ["ควย", "สัส", "หี", "เย็ด", "พ่อง", "กาก", "สวะ", "สถุน", 
+               "กะหรี่", "อีดอก", "ระยำ", "จัญไร", "เสนียด", "ส้นตีน", "ดักดาน"]
+    
+
 def merge_dict(dict1, dict2):
     res = {**dict1, **dict2}
     return res
@@ -40,6 +48,13 @@ def check_all_msg(message: str):
     highest_prob_list = {}
     
     res_data = merge_dict(res_en, res_th)
+    
+    for e in message:
+        if e in en_badwords:
+            return 'I\'m sorry you feel that way. I think you calm down just a little bit.'
+        
+        elif e in th_badwords:
+            return 'แบบนี้ไม่ดีเลยนะคะ เอาเป็นว่าคุณพี่ใจเย็นๆ แล้วค่อยมาคุยกันดีๆ ดีกว่านะคะ'
     
     def response(bot_response: str, list_of_words: list[str], single_response: bool = False, required_words: list[str] = []):
         nonlocal highest_prob_list
