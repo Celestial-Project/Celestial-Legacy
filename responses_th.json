@@ -34,7 +34,7 @@
     "advice_th":
     {
         "response": "ถ้าหนูเป็นพี่ หนูจะเข้าไปเสิร์ชในกูเกิ้ลเอาน่าจะไวกว่านะ",
-        "list_of_words": ["ให้", "คำแนะนำ"],
+        "list_of_words": ["ขอ", "ให้", "คำแนะนำ"],
         "is_single_response": false,
         "required_word": ["คำแนะนำ"] 
     },
@@ -52,7 +52,35 @@
         "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
         "list_of_words": ["เธอ", "หนู", "เป็น", "ใคร"],
         "is_single_response": false,
-        "required_word": ["เป็น", "ใคร"] 
+        "required_word": [] 
+    },
+
+    "love_th": {
+        "response": "หนูก็รักพี่เหมือนกันค่ะ!",
+        "list_of_words": ["ฉัน", "พี่", "เรา", "รัก", "หนู", "เธอ", "นะ"],
+        "is_single_response": false,
+        "required_word": ["รัก", "นะ"]
+    },
+
+    "single_th": {
+        "response": "หนูโสดอยู่ค่ะ จีบได้นะ",
+        "list_of_words": ["โสด", "ไหม", "มี", "แฟน", "ยัง"],
+        "is_single_response": false,
+        "required_word": []
+    },
+
+    "creator_th": {
+        "response": "ผู้ที่มอบชีวิตให้กับหนูคือท่าน จิรายุ แก้วสิงห์ ผู้สร้างของหนูเองค่ะ\nคุณพี่สามารถติดต่อท่านผู้สร้างจาก Discord user นี้ได้เลยนะคะ: `StrixzIV#6258`",
+        "list_of_words": ["ใคร", "ผู้", "ชีวิต", "สร้าง", "เธอ", "หนู"],
+        "is_single_response": false,
+        "required_word": []
+    },
+
+    "speak_lang_th": {
+        "response": "หนูพูดได้ทั้งไทยทั้งอังกฤษเลยค่ะ",
+        "list_of_words": ["หนู", "เธอ", "พูด", "ภาษา", "อะไร"],
+        "is_single_response": false,
+        "required_word": ["ภาษา"]
     }
 
 }
