@@ -1,6 +1,6 @@
 # Celestial
 
-a Python regex Discord chat bot who can talk with you.
+a Python Discord chat bot who can talk with you in English and Thai.
 
 **Invite url:** https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot
 
