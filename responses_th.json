@@ -85,10 +85,10 @@
     
     "money_th":
     {
-        "response": "หนูเป็นบอทนะจะมีตังติดตัวสิ",
+        "response": "หนูเป็นบอทนะ หนูไม่มีตังติดตัวหรอกค่ะ",
         "list_of_words": ["มี", "เงิน", "ตัง", "ให้", "ยืม", "ไหม"],
         "is_single_response": false,
-        "required_word": [],
+        "required_word": []
     }
 
 }

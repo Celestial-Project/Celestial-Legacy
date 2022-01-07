@@ -78,10 +78,10 @@
     
     "money":
     {
-        "response": "I'm a bot you know so I don't have any money",
+        "response": "I don't have any money for you cuz I'm a bot.",
         "list_of_words": ["Can", "I", "borrow", "some", "of", "your", "money"],
         "is_single_response": false,
-        "required_word": [],
+        "required_word": []
     }
     
 }
