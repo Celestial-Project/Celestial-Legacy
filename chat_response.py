@@ -11,10 +11,11 @@ with open('./responses_th.json', 'r', encoding = 'utf-8') as f:
 
 en_badwords = ['dick', 'shit', 'pussy', 'fucker', 'fuck', 'ass', 'noob', 
                'suck', 'bitch', 'wank', 'wanker', 'cock', 'crap', 'bastard',
-               'cunt', 'asshole', 'prick', 'dickhead', 'dumb', 'stupid', 'gay', 'gei']
+               'cunt', 'asshole', 'prick', 'dickhead', 'dumb', 'stupid', 'gay', 
+               'gei', 'balls', 'nigga', 'horny']
 
 th_badwords = ["ควย", "สัส", "หี", "เย็ด", "พ่อง", "กาก", "สวะ", "สถุน", 
-               "กะหรี่", "อีดอก", "ระยำ", "จัญไร", "เสนียด", "ส้นตีน", "ดักดาน"]
+               "กะหรี่", "อีดอก", "ระยำ", "จัญไร", "เสนียด", "ส้นตีน", "ดักดาน", "เงี่ยน"]
     
 
 def merge_dict(dict1, dict2):
@@ -78,5 +79,9 @@ def check_all_msg(message: str):
 def get_response(input_text: str) -> str:
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False)
     split_text = [e.lower() for e in split_text]
+    
+    # uncomment this print statement for debugging.
+    # print(split_text)
+    
     response = check_all_msg(split_text)
     return response
