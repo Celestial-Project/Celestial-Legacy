@@ -88,7 +88,7 @@
         "response": "หนูเป็นบอทนะจะมีตังติดตัวสิ",
         "list_of_words": ["มี", "เงิน", "ตัง", "ให้", "ยืม", "ไหม"],
         "is_single_response": false,
-        "required_word": ["เงิน", "ตัง", "ยืม"],
+        "required_word": [],
     }
 
 }
