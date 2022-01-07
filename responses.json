@@ -45,7 +45,7 @@
         "response": "I'm Celestial! I'm a discord chat bot who can talk with you.",
         "list_of_words": ["who", "are", "you"],
         "is_single_response": false,
-        "required_word": ["who", "you"] 
+        "required_word": [] 
     },
 
     "love": {
@@ -82,6 +82,13 @@
         "list_of_words": ["Can", "I", "borrow", "some", "of", "your", "money"],
         "is_single_response": false,
         "required_word": []
+    },
+
+    "doing": {
+        "response": "I'm talking to you right now.",
+        "list_of_words": ["what", "are", "you", "doing"],
+        "is_single_response": false,
+        "required_word": ["doing"]
     }
     
 }

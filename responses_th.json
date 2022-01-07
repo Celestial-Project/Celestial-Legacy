@@ -26,7 +26,7 @@
     "ask_eating_th":
     {
         "response": "หนูไม่กินอะไรหรอกค่ะ ก็หนูเป็นบอทนี่เนอะ",
-        "list_of_words": ["กิน", "ยัง", "อะไร", "บ้าง", "หิว", "ไร", "ไหม"],
+        "list_of_words": ["กิน", "ยัง", "บ้าง", "หิว", "ไร", "ไหม"],
         "is_single_response": false,
         "required_word": [] 
     },
@@ -52,7 +52,7 @@
         "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
         "list_of_words": ["เธอ", "หนู", "เป็น", "ใคร"],
         "is_single_response": false,
-        "required_word": [] 
+        "required_word": ["เป็น", "ใคร"] 
     },
 
     "love_th": {
@@ -71,7 +71,7 @@
 
     "creator_th": {
         "response": "ผู้ที่มอบชีวิตให้กับหนูคือท่าน จิรายุ แก้วสิงห์ ผู้สร้างของหนูเองค่ะ\nคุณพี่สามารถติดต่อท่านผู้สร้างจาก Discord user นี้ได้เลยนะคะ: `StrixzIV#6258`",
-        "list_of_words": ["ใคร", "ผู้", "ชีวิต", "สร้าง", "เธอ", "หนู"],
+        "list_of_words": ["ใคร", "สร้าง", "ชีวิต", "ผู้สร้าง", "เธอ", "หนู"],
         "is_single_response": false,
         "required_word": []
     },
@@ -86,7 +86,14 @@
     "money_th":
     {
         "response": "หนูเป็นบอทนะ หนูไม่มีตังติดตัวหรอกค่ะ",
-        "list_of_words": ["มี", "เงิน", "ตัง", "ให้", "ยืม", "ไหม"],
+        "list_of_words": ["มี", "เงิน", "ตัง", "ให้ยืม", "ขอยืม", "ไหม"],
+        "is_single_response": false,
+        "required_word": []
+    },
+
+    "doing_th": {
+        "response": "หนูก็กำลังคุยอยู่กับคุณพี่ตรงนี้นี่แหละค่ะ",
+        "list_of_words": ["ทำ", "อะไร", "ไร", "อยู่"],
         "is_single_response": false,
         "required_word": []
     }
