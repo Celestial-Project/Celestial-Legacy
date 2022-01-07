@@ -81,6 +81,14 @@
         "list_of_words": ["หนู", "เธอ", "พูด", "ภาษา", "อะไร"],
         "is_single_response": false,
         "required_word": ["ภาษา"]
+    },
+    
+    "money_th":
+    {
+        "response": "หนูเป็นบอทนะจะมีตังติดตัวสิ",
+        "list_of_words": ["มี", "เงิน", "ตัง", "ให้", "ยืม", "ไหม"],
+        "is_single_response": false,
+        "required_word": [],
     }
 
 }

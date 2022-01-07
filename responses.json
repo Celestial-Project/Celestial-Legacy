@@ -74,5 +74,14 @@
         "list_of_words": ["which", "language", "do", "you", "speak"],
         "is_single_response": false,
         "required_word": ["language"]
+    },
+    
+    "money":
+    {
+        "response": "I'm a bot you know so I don't have any money",
+        "list_of_words": ["Can", "I", "borrow", "some", "of", "your", "money"],
+        "is_single_response": false,
+        "required_word": [],
     }
+    
 }
