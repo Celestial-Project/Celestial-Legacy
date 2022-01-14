@@ -63,7 +63,7 @@
     },
 
     "creator": {
-        "response": "The person who give me life is Jirayu Kaewsing my creator.\nYou can contact him from this Discord user: `StrixzIV#6258`",
+        "response": "The person who give me life is Jirayu Kaewsing my creator.\nYou can contact him from this Discord user: `StrixzIV#6258`\nHis assistant name is Natthanan Rungjarudnon.\nYou can contact him from this Discord user: `Peachpiggies#9229`",
         "list_of_words": ["who", "create", "build", "make", "you", "creator", "your"],
         "is_single_response": false,
         "required_word": []
