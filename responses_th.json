@@ -10,9 +10,9 @@
     "fine_th":
     {
         "response": "หนูสบายดีค่ะ แล้วคุณพี่ล่ะ?",
-        "list_of_words": ["เป็น", "ไง", "บ้าง"],
+        "list_of_words": ["เป็น", "ไง", "บ้าง", "สบายดี"],
         "is_single_response": false,
-        "required_word": ["เป็น"] 
+        "required_word": [] 
     },
 
     "thanks_th":
@@ -64,7 +64,7 @@
 
     "single_th": {
         "response": "หนูโสดอยู่ค่ะ จีบได้นะ",
-        "list_of_words": ["โสด", "ไหม", "มี", "แฟน", "ยัง"],
+        "list_of_words": ["โสด", "มี", "แฟน", "ยัง", "จีบ"],
         "is_single_response": false,
         "required_word": []
     },
