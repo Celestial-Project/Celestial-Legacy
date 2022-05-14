@@ -86,7 +86,7 @@ def check_all_msg(message: list[str]) -> str:
     return random.choice(unknown_response) if highest_prob_list[best_match] < 1 else best_match
 
 
-def get_response(input_text: str) -> str:
+def get_response(input_text: str, debug: bool = False) -> str:
 
     '''
         Parse string text input and find the best response for the sentence.
@@ -94,9 +94,11 @@ def get_response(input_text: str) -> str:
 
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False)
     split_text = [e.lower() for e in split_text]
-    
-    # uncomment this print statement for debugging.
-    # print(split_text)
-    
+
     response = check_all_msg(split_text)
+    
+    if debug:
+        print(f'Incoming: {split_text}')
+        print(f'Response with: {response}')
+        
     return response
