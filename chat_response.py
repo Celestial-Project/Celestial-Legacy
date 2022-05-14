@@ -24,6 +24,11 @@ def merge_dict(dict1, dict2):
 
 
 def msg_probability(input_text: str, reconized_word: str, single_response: bool = False, required_words: list[str] = []) -> int:
+
+    '''
+        Calculate the probability of the sentence and return a word certainty percentage.
+    '''
+
     message_certainty = 0
     has_required_word = True
     
@@ -45,7 +50,12 @@ def msg_probability(input_text: str, reconized_word: str, single_response: bool 
         return 0
     
     
-def check_all_msg(message: str):
+def check_all_msg(message: list[str]) -> str:
+
+    '''
+        Check all the word in the tokenized string list and return the best response
+    '''
+
     highest_prob_list = {}
     
     res_data = merge_dict(res_en, res_th)
@@ -77,6 +87,11 @@ def check_all_msg(message: str):
 
 
 def get_response(input_text: str) -> str:
+
+    '''
+        Parse string text input and find the best response for the sentence.
+    '''
+
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False)
     split_text = [e.lower() for e in split_text]
     
