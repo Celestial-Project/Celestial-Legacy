@@ -54,6 +54,14 @@
         "is_single_response": false,
         "required_word": ["เป็น", "ใคร"] 
     },
+    
+    "who_are_you_th2":
+    {
+        "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
+        "list_of_words": ["ชื่อ", "อะไร", "ไร"],
+        "is_single_response": false,
+        "required_word": ["ชื่อ"] 
+    },
 
     "love_th": {
         "response": "หนูก็รักพี่เหมือนกันค่ะ!",
