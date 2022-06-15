@@ -1,7 +1,7 @@
 {
     "hello": {
         "response": "Hello!",
-        "list_of_words": ["hello", "greetings", "hi", "sup", "hey", "heyo"],
+        "list_of_words": ["hello", "greetings", "hi", "sup", "hey", "heyo","morning"],
         "is_single_response": true,
         "required_word": [] 
     },
@@ -89,6 +89,13 @@
         "list_of_words": ["what", "are", "you", "doing"],
         "is_single_response": false,
         "required_word": ["doing"]
+    },
+
+    "bye": {
+        "response": "bye bye",
+        "list_of_words": ["bye","cya","cu","by"],
+        "is_single_response": true,
+        "required_word": []
     }
-    
+
 }
