@@ -24,7 +24,7 @@ this project uses nextcord as a main dependencies as a wrapper for Discord API a
 Download the dependencies by using command:
 
 ```
-pip install nextcord pythainlp
+pip install --upgrade -r requirements.txt
 ```
 
 ## Contributions
