@@ -16,7 +16,7 @@ to send your message to the bot.
 
 ### Examples
 
-<img src = https://github.com/StrixzIV/Celestial/raw/master/Preview.png />
+![Preview](https://github.com/StrixzIV/Celestial/raw/master/Preview.png)
 
 ## Dependencies & Tools
 
