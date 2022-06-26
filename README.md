@@ -2,7 +2,7 @@
 
 a Python Discord chat bot who can talk with you in English and Thai.
 
-**Invite url:** https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot
+Invite our bot **[here](https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot)**. 
 
 ## Usage
 
@@ -17,19 +17,19 @@ to send your message to the bot.
 
 <img src = https://github.com/StrixzIV/Celestial/raw/master/Preview.png />
 
-## Dependencies
+## Dependencies & Tools
 
-this project uses nextcord as a main dependencies as a wrapper for Discord API and PyThaiNLP for word tokenizing.
+this project required Python 3.8 or newer and **[Nextcord](https://github.com/nextcord/nextcord)** asDiscord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
 
-Download the dependencies by using command:
+You can download the dependencies for development by using command:
 
-```
-pip install nextcord pythainlp
+```sh
+pip install --upgrade -r requirements.txt
 ```
 
 ## Contributions
 
-You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)** and **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses_th.json)**
+You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)**, **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses_th.json)** and **[badwords.json](https://github.com/StrixzIV/Celestial/blob/master/badwords.json)**
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
