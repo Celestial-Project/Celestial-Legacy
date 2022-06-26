@@ -20,7 +20,7 @@ to send your message to the bot.
 
 ## Dependencies & Tools
 
-this project required Python 3.8 or newer and **[Nextcord](https://github.com/nextcord/nextcord)** asDiscord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
+this project required Python 3.8 or newer and **[Nextcord](https://github.com/nextcord/nextcord)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
 
 You can download the dependencies for development by using command:
 
