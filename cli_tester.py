@@ -5,6 +5,7 @@ from chat_response import get_response
 # run this file to test your chat intents on the terminal before commit
 
 print('\u001b[45;1m ** \u001b[0m Welcome to Celestial command-line testing interface!')
+print('\u001b[45;1m ** \u001b[0m Type -h or --help to see list of test macro and controls.')
 print('\u001b[45;1m ** \u001b[0m Press ctrl+c to exit.')
 
 while True:
@@ -13,8 +14,14 @@ while True:
         
         inp = input('\u001b[47;1m #> \u001b[0m ')
         
+        if inp == '--help' or inp == '-h':
+            print('''
+                  \u001b[43;1m macro \u001b[0m -h --help \t Show this help message.
+                  \u001b[43;1m macro \u001b[0m -r --reload \t Reload the chat module.
+                  ''')
+        
         # Reload the engine on command
-        if inp == '--reload' or inp == '-r':
+        elif inp == '--reload' or inp == '-r':
             os.system('clear')
             print('\u001b[45;1m ** \u001b[0m Reloading...')
             os.execl(sys.executable, sys.executable, *sys.argv)
