@@ -92,7 +92,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
     response = check_all_msg(split_text)
     
     if debug:
-        print(f'Incoming: {split_text}')
-        print(f'Response with: {response}')
+        print(f'\u001b[42;1m -> \u001b[0m Incoming: {split_text}')
+        print(f'\u001b[41;1m <- \u001b[0m Response with: {response}')
         
     return response
