@@ -2,7 +2,7 @@
     "hello_th":
     {
         "response": "สวัสดีค่ะ!",
-        "list_of_words": ["สวัสดี", "ดีจ้า", "ฮัลโหล"],
+        "list_of_words": ["สวัสดี", "ดีจ้า", "ฮัลโหล","อรุณหวัด"],
         "is_single_response": true,
         "required_word": [] 
     },
@@ -104,6 +104,20 @@
         "list_of_words": ["ทำ", "อะไร", "ไร", "อยู่"],
         "is_single_response": false,
         "required_word": []
-    }
+    },
 
+    "bye_th": {
+        "response": "ไว้คุยกันใหม่นะคะ แล้วค่อยคุยกันค่ะ",
+        "list_of_words": ["บาย","ลาก่อน","เจอกัน"],
+        "is_single_response": false,
+        "required_word": []
+    },
+
+    "handle_sex_th": {
+        "response": "ขอบคุณค่ะที่คิดกำหนูแบบนั้น แต่หนูขอผ่านดีกว่าค่ะ",
+        "list_of_words": ["มี","เพศ","สำ","พันธ์"],
+        "is_single_response": false,
+        "required_word": []
+    }
+    
 }
