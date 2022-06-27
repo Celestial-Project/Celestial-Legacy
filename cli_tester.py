@@ -18,6 +18,7 @@ while True:
             print('''
                   \u001b[43;1m macro \u001b[0m -h --help \t Show this help message.
                   \u001b[43;1m macro \u001b[0m -r --reload \t Reload the chat module.
+                  \u001b[41;1m  ctl  \u001b[0m ^C ctrl+c \t Quit the program.
                   ''')
         
         # Reload the engine on command
