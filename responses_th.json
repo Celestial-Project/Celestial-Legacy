@@ -107,10 +107,17 @@
     },
 
     "bye_th": {
-        "response": "ไว้คุยกันใหม่นะคะ แล้วค่อยคุยกันคะ",
-        "list_of_words": ["บาย","ลาก่อน","ไว้เจอกัน"],
-        "is_single_response": true,
+        "response": "ไว้คุยกันใหม่นะคะ แล้วค่อยคุยกันค่ะ",
+        "list_of_words": ["บาย","ลาก่อน","เจอกัน"],
+        "is_single_response": false,
+        "required_word": []
+    },
+
+    "handle_sex_th": {
+        "response": "ขอบคุณค่ะที่คิดกำหนูแบบนั้น แต่หนูขอผ่านดีกว่าค่ะ",
+        "list_of_words": ["มี","เพศ","สำ","พันธ์"],
+        "is_single_response": false,
         "required_word": []
     }
-
+    
 }
