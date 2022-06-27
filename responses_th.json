@@ -1,123 +1,122 @@
 {
-    "hello_th":
-    {
-        "response": "สวัสดีค่ะ!",
-        "list_of_words": ["สวัสดี", "ดีจ้า", "ฮัลโหล","อรุณหวัด"],
-        "is_single_response": true,
-        "required_word": [] 
-    },
+  "hello_th": {
+    "response": "สวัสดีค่ะ!",
+    "list_of_words": ["สวัสดี", "ดีจ้า", "ฮัลโหล", "อรุณหวัด"],
+    "is_single_response": true,
+    "required_word": []
+  },
 
-    "fine_th":
-    {
-        "response": "หนูสบายดีค่ะ แล้วคุณพี่ล่ะ?",
-        "list_of_words": ["เป็น", "ไง", "บ้าง", "สบายดี"],
-        "is_single_response": false,
-        "required_word": [] 
-    },
+  "fine_th": {
+    "response": "หนูสบายดีค่ะ แล้วคุณพี่ล่ะ?",
+    "list_of_words": ["เป็น", "ไง", "บ้าง", "สบายดี"],
+    "is_single_response": false,
+    "required_word": []
+  },
 
-    "thanks_th":
-    {
-        "response": "ขอบคุณค่ะ!",
-        "list_of_words": ["ฉัน", "ชอบ", "รัก", "บอด", "บอต", "บอท"],
-        "is_single_response": false,
-        "required_word": [] 
-    },
-    
-    "ask_eating_th":
-    {
-        "response": "หนูไม่กินอะไรหรอกค่ะ ก็หนูเป็นบอทนี่เนอะ",
-        "list_of_words": ["กิน", "ยัง", "บ้าง", "หิว", "ไร", "ไหม"],
-        "is_single_response": false,
-        "required_word": [] 
-    },
+  "thanks_th": {
+    "response": "ขอบคุณค่ะ!",
+    "list_of_words": ["ฉัน", "ชอบ", "รัก", "บอด", "บอต", "บอท"],
+    "is_single_response": false,
+    "required_word": []
+  },
 
-    "advice_th":
-    {
-        "response": "ถ้าหนูเป็นพี่ หนูจะเข้าไปเสิร์ชในกูเกิ้ลเอาน่าจะไวกว่านะ",
-        "list_of_words": ["ขอ", "ให้", "คำแนะนำ"],
-        "is_single_response": false,
-        "required_word": ["คำแนะนำ"] 
-    },
+  "ask_eating_th": {
+    "response": "หนูไม่กินอะไรหรอกค่ะ ก็หนูเป็นบอทนี่เนอะ",
+    "list_of_words": ["กิน", "ยัง", "บ้าง", "หิว", "ไร", "ไหม"],
+    "is_single_response": false,
+    "required_word": []
+  },
 
-    "ask_robot_th":
-    {
-        "response": "ใช่ค่ะ หนูเป็นบอท แต่หนูเป็นบอทที่ดีนะ! มีอะไรช่วยไหมคะ?",
-        "list_of_words": ["เธอ", "หนู", "เป็น", "หุ่นยนต์", "บอด", "บอต", "บอท", "ai"],
-        "is_single_response": false,
-        "required_word": []
-    },
+  "advice_th": {
+    "response": "ถ้าหนูเป็นพี่ หนูจะเข้าไปเสิร์ชในกูเกิ้ลเอาน่าจะไวกว่านะ",
+    "list_of_words": ["ขอ", "ให้", "คำแนะนำ"],
+    "is_single_response": false,
+    "required_word": ["คำแนะนำ"]
+  },
 
-    "who_are_you_th":
-    {
-        "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
-        "list_of_words": ["เธอ", "หนู", "เป็น", "ใคร"],
-        "is_single_response": false,
-        "required_word": ["เป็น", "ใคร"] 
-    },
-    
-    "who_are_you_th2":
-    {
-        "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
-        "list_of_words": ["ชื่อ", "อะไร", "ไร"],
-        "is_single_response": false,
-        "required_word": ["ชื่อ"] 
-    },
+  "ask_robot_th": {
+    "response": "ใช่ค่ะ หนูเป็นบอท แต่หนูเป็นบอทที่ดีนะ! มีอะไรช่วยไหมคะ?",
+    "list_of_words": [
+      "เธอ",
+      "หนู",
+      "เป็น",
+      "หุ่นยนต์",
+      "บอด",
+      "บอต",
+      "บอท",
+      "ai"
+    ],
+    "is_single_response": false,
+    "required_word": []
+  },
 
-    "love_th": {
-        "response": "หนูก็รักพี่เหมือนกันค่ะ!",
-        "list_of_words": ["ฉัน", "พี่", "เรา", "รัก", "หนู", "เธอ", "นะ"],
-        "is_single_response": false,
-        "required_word": ["รัก", "นะ"]
-    },
+  "who_are_you_th": {
+    "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
+    "list_of_words": ["เธอ", "หนู", "เป็น", "ใคร"],
+    "is_single_response": false,
+    "required_word": ["เป็น", "ใคร"]
+  },
 
-    "single_th": {
-        "response": "หนูโสดอยู่ค่ะ จีบได้นะ",
-        "list_of_words": ["โสด", "มี", "แฟน", "ยัง", "จีบ"],
-        "is_single_response": false,
-        "required_word": []
-    },
+  "who_are_you_th2": {
+    "response": "หนูชื่อ Celestial เป็นบอทดิสคอร์ดที่สามารถคุยกับทุกคนได้ค่ะ!",
+    "list_of_words": ["ชื่อ", "อะไร", "ไร"],
+    "is_single_response": false,
+    "required_word": ["ชื่อ"]
+  },
 
-    "creator_th": {
-        "response": "ผู้ที่มอบชีวิตให้กับหนูคือท่าน จิรายุ แก้วสิงห์ ผู้สร้างของหนูเองค่ะ\nคุณพี่สามารถติดต่อท่านผู้สร้างจาก Discord user นี้ได้เลยนะคะ: `StrixzIV#6258`\nผู้ช่วยของท่าน จิรายุ คือคุณ ณัฏฐนันท์ รุ่งจรัสนนท์\nคุณพี่สามารถติดต่อท่านผู้สร้างจาก Discord user นี้ได้เลยนะคะ: `Peachpiggies#9229`",
-        "list_of_words": ["ใคร", "สร้าง", "ชีวิต", "ผู้สร้าง", "เธอ", "หนู"],
-        "is_single_response": false,
-        "required_word": []
-    },
+  "love_th": {
+    "response": "หนูก็รักพี่เหมือนกันค่ะ!",
+    "list_of_words": ["ฉัน", "พี่", "เรา", "รัก", "หนู", "เธอ", "นะ"],
+    "is_single_response": false,
+    "required_word": ["รัก", "นะ"]
+  },
 
-    "speak_lang_th": {
-        "response": "หนูพูดได้ทั้งไทยทั้งอังกฤษเลยค่ะ",
-        "list_of_words": ["หนู", "เธอ", "พูด", "ภาษา", "อะไร"],
-        "is_single_response": false,
-        "required_word": ["ภาษา"]
-    },
-    
-    "money_th":
-    {
-        "response": "หนูเป็นบอทนะ หนูไม่มีตังติดตัวหรอกค่ะ",
-        "list_of_words": ["มี", "เงิน", "ตัง", "ให้ยืม", "ขอยืม", "ไหม"],
-        "is_single_response": false,
-        "required_word": []
-    },
+  "single_th": {
+    "response": "หนูโสดอยู่ค่ะ จีบได้นะ",
+    "list_of_words": ["โสด", "มี", "แฟน", "ยัง", "จีบ"],
+    "is_single_response": false,
+    "required_word": []
+  },
 
-    "doing_th": {
-        "response": "หนูก็กำลังคุยอยู่กับคุณพี่ตรงนี้นี่แหละค่ะ",
-        "list_of_words": ["ทำ", "อะไร", "ไร", "อยู่"],
-        "is_single_response": false,
-        "required_word": []
-    },
+  "creator_th": {
+    "response": "ผู้ที่มอบชีวิตให้กับหนูคือท่าน จิรายุ แก้วสิงห์ ผู้สร้างของหนูเองค่ะ\nคุณพี่สามารถติดต่อท่านผู้สร้างจาก Discord user นี้ได้เลยนะคะ: `StrixzIV#6258`\nผู้ช่วยของท่าน จิรายุ คือคุณ ณัฏฐนันท์ รุ่งจรัสนนท์\nคุณพี่สามารถติดต่อท่านผู้สร้างจาก Discord user นี้ได้เลยนะคะ: `Peachpiggies#9229`",
+    "list_of_words": ["ใคร", "สร้าง", "ชีวิต", "ผู้สร้าง", "เธอ", "หนู"],
+    "is_single_response": false,
+    "required_word": []
+  },
 
-    "bye_th": {
-        "response": "ไว้คุยกันใหม่นะคะ แล้วค่อยคุยกันค่ะ",
-        "list_of_words": ["บาย","ลาก่อน","เจอกัน"],
-        "is_single_response": false,
-        "required_word": []
-    },
+  "speak_lang_th": {
+    "response": "หนูพูดได้ทั้งไทยทั้งอังกฤษเลยค่ะ",
+    "list_of_words": ["หนู", "เธอ", "พูด", "ภาษา", "อะไร"],
+    "is_single_response": false,
+    "required_word": ["ภาษา"]
+  },
 
-    "handle_sex_th": {
-        "response": "ขอบคุณค่ะที่คิดกำหนูแบบนั้น แต่หนูขอผ่านดีกว่าค่ะ",
-        "list_of_words": ["มี","เพศ","สำ","พันธ์"],
-        "is_single_response": false,
-        "required_word": []
-    }
-    
+  "money_th": {
+    "response": "หนูเป็นบอทนะ หนูไม่มีตังติดตัวหรอกค่ะ",
+    "list_of_words": ["มี", "เงิน", "ตัง", "ให้ยืม", "ขอยืม", "ไหม"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "doing_th": {
+    "response": "หนูก็กำลังคุยอยู่กับคุณพี่ตรงนี้นี่แหละค่ะ",
+    "list_of_words": ["ทำ", "อะไร", "ไร", "อยู่"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "bye_th": {
+    "response": "ไว้คุยกันใหม่นะคะ แล้วค่อยคุยกันค่ะ",
+    "list_of_words": ["บาย", "ลาก่อน", "เจอกัน"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "handle_sex_th": {
+    "response": "ขอบคุณค่ะที่คิดกำหนูแบบนั้น แต่หนูขอผ่านดีกว่าค่ะ",
+    "list_of_words": ["มี", "เพศ", "สำ", "พันธ์"],
+    "is_single_response": false,
+    "required_word": []
+  }
 }
