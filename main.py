@@ -1,5 +1,6 @@
 import os
 import sys
+import nextcord
 from dotenv import load_dotenv
 from nextcord.ext import commands
 from chat_response import get_response
@@ -29,10 +30,19 @@ async def answer(ctx, *msg):
     
 @client.command(name = 'reload>')
 @commands.check(is_owner)
-async def reload(ctx):
+async def reload_bot(ctx):
     os.system('clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
     os.execl(sys.executable, sys.executable, *sys.argv)
-        
+    
+
+@reload_bot.error
+async def on_reload_error(ctx, error):
+    
+    error_embed = nextcord.Embed(title='⚠️ Error ⚠️', description='Reload attempt from non-authorized user.', color=0xFF0000)
+    
+    print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {ctx.author} which is not an authorized user.')
+    await ctx.send(embed=error_embed)
+    
         
 client.run(os.getenv('TOKEN'))
