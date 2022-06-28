@@ -16,7 +16,7 @@ to send your message to the bot.
 
 ### Examples
 
-![Preview](https://github.com/StrixzIV/Celestial/raw/master/Preview.png)
+![Preview](./assets/Preview.png)
 
 ## Dependencies & Tools
 
@@ -37,6 +37,10 @@ This testing file show the tokenized input messages and how the bot is respondin
 ```sh
 python cli_tester.py
 ```
+
+### Examples of intents tester
+
+![command-line tester](./assets/cli-test-preview.png)
 
 ## Contributions
 
