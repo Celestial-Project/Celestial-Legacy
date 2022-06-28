@@ -12,7 +12,12 @@ load_dotenv()
 
 modList = [int(os.getenv('ID1'))]
 
-def is_owner(ctx):
+def is_owner(ctx) -> bool:
+    
+    '''
+        Check if the command user is authorized.
+    '''
+    
     if ctx.author.id in modList:
         return ctx.author.id in modList
     
