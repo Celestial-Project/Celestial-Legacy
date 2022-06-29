@@ -44,7 +44,7 @@ python cli_tester.py
 
 ## Contributions
 
-You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)**, **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses_th.json)** and **[badwords.json](https://github.com/StrixzIV/Celestial/blob/master/badwords.json)**
+You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/raw/master/responses/responses.json)**, **[responses_th.json](https://github.com/StrixzIV/Celestial/raw/master/responses/responses_th.json)** and **[badwords.json](https://github.com/StrixzIV/Celestial/raw/master/responses/badwords.json)**
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
