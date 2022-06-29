@@ -16,7 +16,7 @@ to send your message to the bot.
 
 ### Examples
 
-![Preview](https://github.com/StrixzIV/Celestial/raw/master/Preview.png)
+![Preview](./assets/Preview.png)
 
 ## Dependencies & Tools
 
@@ -38,9 +38,13 @@ This testing file show the tokenized input messages and how the bot is respondin
 python cli_tester.py
 ```
 
+### Examples of intents tester
+
+![command-line tester](./assets/cli-test-preview.png)
+
 ## Contributions
 
-You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses.json)**, **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses_th.json)** and **[badwords.json](https://github.com/StrixzIV/Celestial/blob/master/badwords.json)**
+You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses/responses.json)**, **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses/responses_th.json)** and **[badwords.json](https://github.com/StrixzIV/Celestial/blob/master/responses/badwords.json)**
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

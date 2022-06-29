@@ -2,13 +2,13 @@ import random
 import json
 import pythainlp
 
-with open('./responses.json', 'r', encoding = 'utf-8') as f:
+with open('./responses/responses.json', 'r', encoding = 'utf-8') as f:
     res_en = json.load(f)
     
-with open('./responses_th.json', 'r', encoding = 'utf-8') as f:
+with open('./responses/responses_th.json', 'r', encoding = 'utf-8') as f:
     res_th = json.load(f)
     
-with open('./badwords.json', 'r', encoding = 'utf-8') as f:
+with open('./responses/badwords.json', 'r', encoding = 'utf-8') as f:
     badwords = json.load(f)
     
 
@@ -68,7 +68,7 @@ def check_all_msg(message: list[str]) -> str:
 
     for res in res_data:
         response(
-            res_data[res]['response'], 
+            random.choice(res_data[res]['response']), 
             list_of_words = res_data[res]['list_of_words'], 
             single_response = res_data[res]['is_single_response'], 
             required_words = res_data[res]['required_word']
@@ -92,7 +92,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
     response = check_all_msg(split_text)
     
     if debug:
-        print(f'Incoming: {split_text}')
-        print(f'Response with: {response}')
+        print(f'\u001b[42;1m -> \u001b[0m Incoming: {split_text}')
+        print(f'\u001b[41;1m <- \u001b[0m Response with: {response}')
         
     return response
