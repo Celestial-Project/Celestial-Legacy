@@ -118,6 +118,13 @@
         "list_of_words": ["มี","เพศ","สำ","พันธ์"],
         "is_single_response": false,
         "required_word": []
+    },
+
+    "your_job_th": {
+        "response": "งานหนูคือการให้ความบันเทิงและคุยกับพวกคุณไงคะ",
+        "list_of_words": ["งาน","หนู","เธอ","คือ","อะ","ไร"],
+        "is_single_response": false,
+        "required_word": []
     }
     
 }
