@@ -68,7 +68,7 @@ def check_all_msg(message: list[str]) -> str:
 
     for res in res_data:
         response(
-            res_data[res]['response'], 
+            random.choice(res_data[res]['response']), 
             list_of_words = res_data[res]['list_of_words'], 
             single_response = res_data[res]['is_single_response'], 
             required_words = res_data[res]['required_word']
