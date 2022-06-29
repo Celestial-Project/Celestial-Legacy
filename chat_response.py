@@ -2,13 +2,13 @@ import random
 import json
 import pythainlp
 
-with open('./responses.json', 'r', encoding = 'utf-8') as f:
+with open('./responses/responses.json', 'r', encoding = 'utf-8') as f:
     res_en = json.load(f)
     
-with open('./responses_th.json', 'r', encoding = 'utf-8') as f:
+with open('./responses/responses_th.json', 'r', encoding = 'utf-8') as f:
     res_th = json.load(f)
     
-with open('./badwords.json', 'r', encoding = 'utf-8') as f:
+with open('./responses/badwords.json', 'r', encoding = 'utf-8') as f:
     badwords = json.load(f)
     
 
