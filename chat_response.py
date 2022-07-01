@@ -12,7 +12,7 @@ with open('./responses/badwords.json', 'r', encoding = 'utf-8') as f:
     badwords = json.load(f)
     
 
-def merge_dict(dict1, dict2):
+def merge_dict(dict1: dict, dict2: dict) -> dict:
     res = {**dict1, **dict2}
     return res
 
