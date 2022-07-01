@@ -24,7 +24,7 @@ def is_owner(ctx) -> bool:
 
 @client.event
 async def on_ready():
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(f'\u001b[45;1m ** \u001b[0m Successfully logged in as: {client.user}')
     
 
@@ -36,7 +36,7 @@ async def answer(ctx, *msg):
 @client.command(name = 'reload>')
 @commands.check(is_owner)
 async def reload_bot(ctx):
-    os.system('clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
     os.execl(sys.executable, sys.executable, *sys.argv)
     
