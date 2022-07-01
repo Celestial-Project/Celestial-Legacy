@@ -23,7 +23,7 @@ while True:
         
         # Reload the engine on command
         elif inp == '--reload' or inp == '-r':
-            os.system('clear')
+            os.system('cls' if os.name == 'nt' else 'clear')
             print('\u001b[45;1m ** \u001b[0m Reloading...')
             os.execl(sys.executable, sys.executable, *sys.argv)
                   
