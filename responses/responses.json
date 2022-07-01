@@ -57,7 +57,7 @@
 
   "ask_robot": {
     "response": [
-      "Yes I'm a robot, but I’m a good one. Let me prove it. How can I help you?"
+      "Yes I'm a robot, but I'm a good one. Let me prove it. How can I help you?"
     ],
     "list_of_words": ["are", "you", "a", "robot", "bot", "ai"],
     "is_single_response": false,
