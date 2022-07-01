@@ -163,5 +163,12 @@
     "list_of_words": ["งาน","หนู","เธอ","คือ","อะไร"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "different_world_th": {
+    "response": ["หนูไม่รู้หรอกวิธีที่จะไปต่างโลกหนะ ลองถามลุงขับคนขับรถบรรทุกที่อยู่ค่างตึกนั้นสิ"],
+    "list_of_words": ["ไป","ต่าง","โลก","ยัง"],
+    "is_single_response": false,
+    "required_word": []
   }
 }

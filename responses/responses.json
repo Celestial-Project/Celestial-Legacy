@@ -158,6 +158,15 @@
     "list_of_words": ["what","is","your","job"],
     "is_single_response": false,
     "required_word": ["job"]
+  },
+
+  "different_world": {
+    "response": [
+      "I don't know how to go to the different world but, you can ask the truck driver near that building corner."
+    ],
+    "list_of_words": ["do","you","know","how","to","go","to","the","different","world"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
