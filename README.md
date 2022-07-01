@@ -48,6 +48,8 @@ You can contribute to this project by updating the **[responses.json](https://gi
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+Make sure to read our code of conduct **[here](./CODE_OF_CONDUCT.md)** before start contributing to our project.
+
 Please make sure to update tests as appropriate.
 
 ## License
