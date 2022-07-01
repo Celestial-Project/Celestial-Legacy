@@ -151,5 +151,13 @@
     "list_of_words": ["do", "you", "want", "to", "have", "sex", "make", "love"],
     "is_single_response": false,
     "required_word": ["sex"]
+  },
+
+  "your_job": {
+    "response": ["My job is to chatting with you all of course."],
+    "list_of_words": ["what","is","your","job"],
+    "is_single_response": false,
+    "required_word": ["job"]
   }
+
 }
