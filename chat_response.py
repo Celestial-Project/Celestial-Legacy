@@ -2,15 +2,19 @@ import random
 import json
 import pythainlp
 
-with open('./responses/responses.json', 'r', encoding = 'utf-8') as f:
-    res_en = json.load(f)
-    
-with open('./responses/responses_th.json', 'r', encoding = 'utf-8') as f:
-    res_th = json.load(f)
-    
-with open('./responses/badwords.json', 'r', encoding = 'utf-8') as f:
-    badwords = json.load(f)
-    
+resp_dir = [
+    './responses/responses.json',
+    './responses/responses_th.json',
+    './responses/badwords.json'
+]
+
+read_resp = []
+
+for resp in resp_dir:
+    with open(resp, 'r', encoding = 'utf-8') as read:
+        read_resp.append(json.load(read))
+
+(res_en, res_th, badwords) = read_resp
 
 def merge_dict(dict1: dict, dict2: dict) -> dict:
     res = {**dict1, **dict2}
