@@ -165,9 +165,9 @@
     "required_word": []
   },
 
-  "different_world_th": {
+  "another_world_th": {
     "response": ["หนูไม่รู้หรอกวิธีที่จะไปต่างโลกหนะ ลองถามลุงขับคนขับรถบรรทุกที่อยู่ค่างตึกนั้นสิ"],
-    "list_of_words": ["ไป","ต่าง","โลก","ยัง"],
+    "list_of_words": ["ไป","ต่าง","โลก","ยัง","ไง"],
     "is_single_response": false,
     "required_word": []
   },

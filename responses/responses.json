@@ -160,9 +160,9 @@
     "required_word": ["job"]
   },
 
-  "different_world": {
+  "another_world": {
     "response": [
-      "I don't know how to go to the different world but, you can ask the truck driver near that building corner."
+      "I don't know how to go to the another world but, you can ask the truck driver near that building corner."
     ],
     "list_of_words": ["do","you","know","how","to","go","to","the","different","world"],
     "is_single_response": false,
