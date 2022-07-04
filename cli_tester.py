@@ -1,6 +1,6 @@
 import os 
-import sys
-from chat_response import get_response
+import chat_response
+from importlib import reload
 
 # run this file to test your chat intents on the terminal before commit
 
@@ -25,10 +25,10 @@ while True:
         elif inp == '--reload' or inp == '-r':
             os.system('cls' if os.name == 'nt' else 'clear')
             print('\u001b[45;1m ** \u001b[0m Reloading...')
-            os.execl(sys.executable, sys.executable, *sys.argv)
+            reload(chat_response)
                   
         else:
-            get_response(inp, debug = True)
+            chat_response.get_response(inp, debug = True)
         
     except KeyboardInterrupt:
         print('\n\u001b[45;1m ** \u001b[0m Exiting test mode...')
