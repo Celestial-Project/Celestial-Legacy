@@ -155,9 +155,9 @@
 
   "your_job": {
     "response": ["My job is to chatting with you all of course."],
-    "list_of_words": ["what","is","your","job"],
+    "list_of_words": ["what","is","your","job","purpose"],
     "is_single_response": false,
-    "required_word": ["job"]
+    "required_word": []
   },
 
   "another_world": {
