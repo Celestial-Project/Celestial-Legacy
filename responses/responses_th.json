@@ -151,7 +151,30 @@
     "response": [
       "ขอบคุณค่ะที่คิดกับหนูแบบนั้น แต่หนูขอผ่านดีกว่าค่ะ"
     ],
-    "list_of_words": ["มี", "เพศ", "สำ", "พันธ์"],
+    "list_of_words": ["เพศ", "สำพันธ์"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "your_job_th": {
+    "response": [
+      "งานของหนูคือคุยกับพวกคุณไงคะ"
+    ],
+    "list_of_words": ["งาน","หน้าที่","ของ","หนู","เธอ","คือ","อะไร"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "another_world_th": {
+    "response": ["หนูไม่รู้หรอกวิธีที่จะไปต่างโลกนะ ลองถามลุงขับคนขับรถบรรทุกที่อยู่ข้างตึกนั้นสิ"],
+    "list_of_words": ["ไป","ต่าง","โลก","ยัง","ไง"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "age_th": {
+    "response": ["โถ่...คุณพี่ไม่ควรถามอายุผู้หญิงสิคะ"],
+    "list_of_words": ["หนู","เธอ","อายุ","เท่า","ไหร่"],
     "is_single_response": false,
     "required_word": []
   }

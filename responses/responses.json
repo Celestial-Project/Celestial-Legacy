@@ -151,5 +151,29 @@
     "list_of_words": ["do", "you", "want", "to", "have", "sex", "make", "love"],
     "is_single_response": false,
     "required_word": ["sex"]
+  },
+
+  "your_job": {
+    "response": ["My job is to make you have some fun when chatting with me"],
+    "list_of_words": ["what","is","your","job","purpose"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "another_world": {
+    "response": [
+      "I don't know how to go to the another world. But you can ask the truck driver near that building corner."
+    ],
+    "list_of_words": ["do","you","know","how","to","go","to","the","different","world"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "age": {
+    "response": ["Gosh... you shouldn't ask a girl age."],
+    "list_of_words": ["how","old","are","you"],
+    "is_single_response": false,
+    "required_word": ["old"]
   }
+
 }
