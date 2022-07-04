@@ -1,10 +1,10 @@
 import os
-import sys
 import nextcord
+import chat_response
 from dotenv import load_dotenv
 from nextcord.ext import commands
-from chat_response import get_response
 from dotenv import load_dotenv
+from importlib import reload
 
 client = commands.Bot(command_prefix = '<')
 
@@ -30,7 +30,7 @@ async def on_ready():
 
 @client.command(name = 'usr>')
 async def answer(ctx, *msg):
-    await ctx.send(get_response(' '.join(list(msg))))
+    await ctx.send(chat_response.get_response(' '.join(list(msg))))
     
     
 @client.command(name = 'reload>')
@@ -38,7 +38,7 @@ async def answer(ctx, *msg):
 async def reload_bot(ctx):
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
-    os.execl(sys.executable, sys.executable, *sys.argv)
+    reload(chat_response)
     
 
 @reload_bot.error
