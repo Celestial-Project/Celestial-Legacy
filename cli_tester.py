@@ -14,7 +14,7 @@ while True:
         
         inp = input('\u001b[47;1m #> \u001b[0m ')
         
-        if inp == '--help' or inp == '-h':
+        if inp in {'--help', '-h'}:
             print('''
                   \u001b[43;1m macro \u001b[0m -h --help \t Show this help message.
                   \u001b[43;1m macro \u001b[0m -r --reload \t Reload the chat module.
@@ -22,7 +22,7 @@ while True:
                   ''')
         
         # Reload the engine on command
-        elif inp == '--reload' or inp == '-r':
+        elif inp in {'--reload', '-r'}:
             os.system('cls' if os.name == 'nt' else 'clear')
             print('\u001b[45;1m ** \u001b[0m Reloading...')
             reload(chat_response)
