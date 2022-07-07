@@ -20,7 +20,10 @@ to send your message to the bot.
 
 ## Dependencies & Tools
 
-this project required Python 3.8 or newer and **[Nextcord](https://github.com/nextcord/nextcord)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
+This project required Python 3.9 or higher.
+This project uses **[Nextcord](https://github.com/nextcord/nextcord)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
+
+You can take a look of a dependencies list **[here](https://github.com/StrixzIV/Celestial/blob/master/requirements.txt)**.
 
 You can download the dependencies for development by using command:
 
