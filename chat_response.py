@@ -1,6 +1,8 @@
 import random
 import json
 import pythainlp
+import sys
+
 
 resp_dir = [
     './responses/responses.json',
@@ -15,11 +17,6 @@ for resp in resp_dir:
         read_resp.append(json.load(read))
 
 (res_en, res_th, badwords) = read_resp
-
-def merge_dict(dict1: dict, dict2: dict) -> dict:
-    res = {**dict1, **dict2}
-    return res
-
 
 def msg_probability(input_text: str, reconized_word: str, single_response: bool = False, required_words: list[str] = []) -> int:
 
@@ -56,7 +53,7 @@ def check_all_msg(message: list[str]) -> str:
 
     highest_prob_list = {}
     
-    res_data = merge_dict(res_en, res_th)
+    res_data = res_en | res_th
     
     for e in message:
         if e in badwords['en']:
