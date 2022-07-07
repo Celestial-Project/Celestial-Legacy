@@ -3,6 +3,9 @@ import json
 import pythainlp
 import sys
 
+# check if python > 3.9
+if sys.version_info[0:2] < (3, 9):
+    raise AssertionError('This project requires Python 3.9 or higher.')
 
 resp_dir = [
     './responses/responses.json',
