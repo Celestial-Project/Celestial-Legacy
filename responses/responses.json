@@ -176,24 +176,6 @@
     "list_of_words": ["how", "old", "are", "you"],
     "is_single_response": false,
     "required_word": ["old"]
-  },
-
-  "lazy": {
-    "response": ["Yeah, me too. You should take a break."],
-    "list_of_words": ["I'm","so","lazy","exhausted","tired"],
-    "is_single_response": false,
-    "required_word": []
-  },
-
-  "sleep": {
-    "response": [
-      "You should hit the sack.",
-      "You should take a sleep.",
-      "You should take a nap."
-    ],
-    "list_of_words": ["I'm","so","sleepy"],
-    "is_single_response": false,
-    "required_word": []
   }
 
 }

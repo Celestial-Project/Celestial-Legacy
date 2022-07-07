@@ -158,7 +158,7 @@
 
   "your_job_th": {
     "response": [
-      "งานของหนูคือคุยกับพวกคุณพี่ไงคะ"
+      "งานของหนูคือคุยกับพวกคุณไงคะ"
     ],
     "list_of_words": ["งาน", "หน้าที่", "ของ", "หนู", "เธอ", "คือ", "อะไร"],
     "is_single_response": false,
@@ -177,24 +177,5 @@
     "list_of_words": ["หนู", "เธอ", "อายุ", "เท่า", "ไหร่"],
     "is_single_response": false,
     "required_word": []
-  },
-
-  "lazy_th": {
-    "response": ["หนูก็เหมือนกันค่ะ คุณพี่ควรไปพักนะคะ"],
-    "list_of_words": ["เหนื่อย","เบื่อ","ขี้เกียจ"],
-    "is_single_response": false,
-    "required_word": []
-  },
-
-  "sleep_th": {
-    "response": [
-      "ไปนอนสิคะ คุณพี่ควรไปพักนะคะ",
-      "คุณพี่ควรไปพักนะคะ",
-      "ไปนอนสิคะ"
-    ],
-    "list_of_words": ["ง่วง"],
-    "is_single_response": false,
-    "required_word": []
   }
-
 }
