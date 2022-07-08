@@ -164,7 +164,7 @@
 
   "another_world": {
     "response": [
-      "I don't know how to go to the another world. But you can ask the truck driver near that building corner."
+      "I don't know how to go to another world. But you can ask the truck driver near that building corner."
     ],
     "list_of_words": ["do", "you", "know", "how", "to", "go", "to", "the", "different", "world"],
     "is_single_response": false,
@@ -176,6 +176,27 @@
     "list_of_words": ["how", "old", "are", "you"],
     "is_single_response": false,
     "required_word": ["old"]
+  },
+
+  "lazy": {
+    "response": [
+      "Yeah me too. You should take a break.",
+      "Same to me. You should take a break."
+    ],
+    "list_of_words": ["i","lazy","exhausted","bored"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "sleep": {
+    "response": [
+      "You should hit the sack.",
+      "You should go to sleep.",
+      "You should take a nap."
+    ],
+    "list_of_words": ["i","sleepy"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
