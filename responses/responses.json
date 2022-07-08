@@ -148,7 +148,7 @@
     "response": [
       "Thanks for thinking that way with me but, I'm gonna pass this time"
     ],
-    "list_of_words": ["do", "you", "want", "to", "have", "sex", "make", "love"],
+    "list_of_words": ["have", "sex", "make", "love"],
     "is_single_response": false,
     "required_word": ["sex"]
   },
@@ -183,7 +183,7 @@
       "Yeah me too. You should take a break.",
       "Same to me. You should take a break."
     ],
-    "list_of_words": ["i","lazy","exhausted","bored"],
+    "list_of_words": ["i", "lazy", "exhausted", "bored"],
     "is_single_response": false,
     "required_word": []
   },
@@ -194,7 +194,7 @@
       "You should go to sleep.",
       "You should take a nap."
     ],
-    "list_of_words": ["i","sleepy"],
+    "list_of_words": ["i", "sleepy"],
     "is_single_response": false,
     "required_word": []
   }
