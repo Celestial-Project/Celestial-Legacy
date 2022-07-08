@@ -183,7 +183,7 @@
       "Yeah me too. You should take a break.",
       "Same to me. You should take a break."
     ],
-    "list_of_words": ["I","am","so","lazy","exhausted","bored"],
+    "list_of_words": ["i","lazy","exhausted","bored"],
     "is_single_response": false,
     "required_word": []
   },
@@ -194,7 +194,7 @@
       "You should go to sleep.",
       "You should take a nap."
     ],
-    "list_of_words": ["I","am","so","sleepy"],
+    "list_of_words": ["i","sleepy"],
     "is_single_response": false,
     "required_word": []
   }
