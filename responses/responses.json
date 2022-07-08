@@ -197,6 +197,15 @@
     "list_of_words": ["i","sleepy"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "number": {
+    "response": [
+      "I don't have any phone number for you cuz I'm a bot."
+    ],
+    "list_of_words": ["can","i","have","your","number"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }

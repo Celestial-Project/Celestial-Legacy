@@ -199,6 +199,13 @@
     "list_of_words": ["ง่วง"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "number_th": {
+    "response": ["หนูเป็นบอทนะ หนูไม่มีเบอร์โทรศัพท์หรอกค่ะ"],
+    "list_of_words": ["มี","เบอร์","โทร","ไหม"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
