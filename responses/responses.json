@@ -206,6 +206,15 @@
     "list_of_words": ["can","i","have","your","number"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "siblings": {
+    "response": [
+      "Um... I don't know about that dad didn't tell me about that at all."
+    ],
+    "list_of_words": ["do","you","have","siblings"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }

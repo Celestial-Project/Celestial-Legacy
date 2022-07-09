@@ -206,6 +206,15 @@
     "list_of_words": ["มี","เบอร์","โทร","ไหม"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "siblings_th" : {
+    "response": [
+      "ไม่รู้สิ พ่อไม่เคยบอกหนูอะ"
+    ],
+    "list_of_words": ["มี","พี่น้อง","ไหม"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
