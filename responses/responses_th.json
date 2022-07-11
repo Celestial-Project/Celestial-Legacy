@@ -167,7 +167,7 @@
 
   "another_world_th": {
     "response": ["หนูไม่รู้หรอกวิธีที่จะไปต่างโลกนะ ลองถามลุงขับคนขับรถบรรทุกที่อยู่ข้างตึกนั้นสิ"],
-    "list_of_words": ["ไป", "ต่าง", "โลก", "ยัง", "ไง"],
+    "list_of_words": ["ต่าง", "โลก", "ยัง", "ไง"],
     "is_single_response": false,
     "required_word": []
   },
@@ -203,7 +203,7 @@
 
   "number_th": {
     "response": ["หนูเป็นบอทนะ หนูไม่มีเบอร์โทรศัพท์หรอกค่ะ"],
-    "list_of_words": ["มี","เบอร์","โทร"],
+    "list_of_words": ["เบอร์","โทร"],
     "is_single_response": false,
     "required_word": []
   },
