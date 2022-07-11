@@ -199,6 +199,22 @@
     "list_of_words": ["ง่วง"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "number_th": {
+    "response": ["หนูเป็นบอทนะ หนูไม่มีเบอร์โทรศัพท์หรอกค่ะ"],
+    "list_of_words": ["มี","เบอร์","โทร"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "siblings_th" : {
+    "response": [
+      "ไม่รู้สิ พ่อไม่เคยบอกหนูอะ"
+    ],
+    "list_of_words": ["มี","พี่น้อง"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
