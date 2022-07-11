@@ -21,7 +21,7 @@ for resp in resp_dir:
 
 (res_en, res_th, badwords) = read_resp
 
-def msg_probability(input_text: str, reconized_word: str, single_response: bool = False, required_words: list[str] = []) -> int:
+def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> int:
 
     '''
         Calculate the probability of the sentence and return a word certainty percentage.
@@ -65,7 +65,7 @@ def check_all_msg(message: list[str]) -> str:
         elif e in badwords['th']:
             return 'แบบนี้ไม่ดีเลยนะคะ เอาเป็นว่าคุณพี่ใจเย็นๆ แล้วค่อยมาคุยกันดีๆ ดีกว่านะคะ'
     
-    def response(bot_response: str, list_of_words: list[str], single_response: bool = False, required_words: list[str] = []):
+    def response(bot_response: str, list_of_words: set[str], single_response: bool = False, required_words: set[str] = []):
         nonlocal highest_prob_list
         highest_prob_list[bot_response] = msg_probability(message, list_of_words, single_response, required_words)
         
@@ -73,9 +73,9 @@ def check_all_msg(message: list[str]) -> str:
     for res in res_data:
         response(
             random.choice(res_data[res]['response']), 
-            list_of_words = res_data[res]['list_of_words'], 
+            list_of_words = set(res_data[res]['list_of_words']), 
             single_response = res_data[res]['is_single_response'], 
-            required_words = res_data[res]['required_word']
+            required_words = set(res_data[res]['required_word'])
         )
         
     unknown_response = ['Could you re-phrase that?', '...', 'Sounds about right', 'What does that mean?']   
