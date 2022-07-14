@@ -59,10 +59,10 @@ def check_all_msg(message: list[str]) -> str:
     res_data = res_en | res_th
     
     for e in message:
-        if e in badwords['en']:
+        if e in set(badwords['en']):
             return 'I\'m sorry you feel that way. I think you calm down just a little bit.'
         
-        elif e in badwords['th']:
+        elif e in set(badwords['th']):
             return 'แบบนี้ไม่ดีเลยนะคะ เอาเป็นว่าคุณพี่ใจเย็นๆ แล้วค่อยมาคุยกันดีๆ ดีกว่านะคะ'
     
     def response(bot_response: str, list_of_words: set[str], single_response: bool = False, required_words: set[str] = []):
