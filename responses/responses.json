@@ -216,6 +216,16 @@
     "list_of_words": ["have","siblings"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "when_new_year": {
+    "response": [
+      "The time pass quickly like a blink it'll be new year soon.",
+      "Time flies like a lie it's gonna be new year soon."
+    ],
+    "list_of_words": ["when","new","year"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
