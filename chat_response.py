@@ -84,8 +84,16 @@ def check_all_msg(message: list[str], date: dt.datetime) -> str:
         )
 
     for fes_res in fes_res_data:
+        
+        if isinstance(fes_res_data[fes_res]['date'], int):
+            date_frame = [dt.datetime(date.year, fes_res_data[fes_res]['month'], fes_res_data[fes_res]['date']).date()]
+        
+        else:
+            date_range = range(fes_res_data[fes_res]['date'][0], (fes_res_data[fes_res]['date'][1] + 1))
+            date_frame =  [dt.datetime(date.year, fes_res_data[fes_res]['month'], d).date() for d in date_range]
+        
         response(
-            fes_res_data[fes_res]['response'][0 if date == dt.datetime(date.year, fes_res_data[fes_res]['month'], fes_res_data[fes_res]['date']).date() else 1],
+            fes_res_data[fes_res]['response'][0 if date in date_frame else 1],
             list_of_words = set(fes_res_data[fes_res]['list_of_words']), 
             single_response = fes_res_data[fes_res]['is_single_response'], 
             required_words = set(fes_res_data[fes_res]['required_word'])
