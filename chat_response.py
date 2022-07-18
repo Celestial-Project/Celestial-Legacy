@@ -76,6 +76,10 @@ def check_all_msg(message: list[str], date: dt.datetime) -> str:
         
 
     for res in res_data:
+        
+        if not res_data[res]['list_of_words']:
+            raise ValueError(f'Intents: "{res}" required a list of words to be functional.')
+        
         response(
             random.choice(res_data[res]['response']), 
             list_of_words = set(res_data[res]['list_of_words']), 
@@ -84,6 +88,9 @@ def check_all_msg(message: list[str], date: dt.datetime) -> str:
         )
 
     for fes_res in fes_res_data:
+        
+        if not fes_res_data[fes_res]['list_of_words']:
+            raise ValueError(f'Intents: "{fes_res}" required a list of words to be functional.')
         
         if isinstance(fes_res_data[fes_res]['date'], int):
             date_frame = [dt.datetime(date.year, fes_res_data[fes_res]['month'], fes_res_data[fes_res]['date']).date()]
