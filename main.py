@@ -1,4 +1,5 @@
 import os
+import git
 import nextcord
 import chat_response
 from dotenv import load_dotenv
@@ -36,11 +37,12 @@ async def answer(ctx, *msg):
     await ctx.send(chat_response.get_response(' '.join(list(msg))))
     
     
-@client.command(name = 'reload>')
+@client.command(name = '!reload>')
 @commands.check(is_owner)
 async def reload_bot(ctx):
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
+    git.Repo(os.getcwd()).remotes.upstream.pull('master')
     reload(chat_response)
     
 
