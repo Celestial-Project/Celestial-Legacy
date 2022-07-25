@@ -1,3 +1,4 @@
+import re
 import random
 import json
 import pythainlp
@@ -117,6 +118,8 @@ def get_response(input_text: str, debug: bool = False) -> str:
     '''
         Parse string text input and find the best response for the sentence.
     '''
+
+    input_text = re.sub(r'[^\w\s]', '', input_text)
 
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False)
     split_text = [e.lower() for e in split_text]
