@@ -23,7 +23,7 @@ to send your message to the bot.
 This project required Python 3.9 or higher.
 This project uses **[Nextcord](https://github.com/nextcord/nextcord)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
 
-You can take a look of a dependencies list **[here](https://github.com/StrixzIV/Celestial/blob/master/requirements.txt)**.
+You can take a look of a dependencies list **[here](./requirements.txt)**.
 
 You can download the dependencies for development by using command:
 
@@ -33,7 +33,7 @@ pip install --upgrade -r requirements.txt
 
 ## Testing & Debugging
 
-You can test the outcome of your intents by running **[this](https://github.com/StrixzIV/Celestial/blob/master/cli_tester.py)** testing python file.
+You can test the outcome of your intents by running **[this](./cli_tester.py)** testing python file.
 
 This testing file show the tokenized input messages and how the bot is responding back to you in command-line interface.
 
@@ -47,7 +47,7 @@ python cli_tester.py
 
 ## Contributions
 
-You can contribute to this project by updating the **[responses.json](https://github.com/StrixzIV/Celestial/blob/master/responses/responses.json)**, **[responses_th.json](https://github.com/StrixzIV/Celestial/blob/master/responses/responses_th.json)** and **[badwords.json](https://github.com/StrixzIV/Celestial/blob/master/responses/badwords.json)**
+You can contribute to this project by updating the intents JSON files in **[responses](./responses)** folder.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -57,4 +57,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-* **[MIT License](https://github.com/StrixzIV/Celestial/blob/master/LICENSE)**
+* **[MIT License](./LICENSE)**
