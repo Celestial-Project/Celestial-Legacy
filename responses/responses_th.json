@@ -216,13 +216,12 @@
     "is_single_response": false,
     "required_word": []
   },
-
-  "when_new_year_th": {
+  
+  "sport_th": {
     "response": [
-      "เวลาผ่านไปเร็วเหมือนโกหกเดี๋ยวก็ปีใหม่แล้วค่ะ",
-      "เวลาผ่านไปเร็วเหมือนกะพริบตาเดี๋ยวก็ปีใหม่แล้วค่ะ"
+      "หนูเป็นบอทนะไม่มีแขนและขาก็เลยเล่นกีฬาไม่ได้"
     ],
-    "list_of_words": ["เมื่อไหร่","ปีใหม่"],
+    "list_of_words": ["กีฬา"],
     "is_single_response": false,
     "required_word": []
   }
