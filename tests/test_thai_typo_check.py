@@ -7,4 +7,4 @@ with open('./responses/responses_th.json') as f:
 
 def test_typo_check():
     for response in res_th:
-        assert [res for res in res_th[response]['response'] if res.endswith('นะค่ะ')] == []
+        assert [res for res in res_th[response]['response'] if 'นะค่ะ' in res] == []
