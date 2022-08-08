@@ -13,21 +13,18 @@ from chat_response import get_response
 with open('./responses/badwords.json') as f:
     bw = json.load(f)
     
-en_rude_sentences = [
-    'fuck you',
-    'motherfucker',
-    'you fucking cunt',
-    'shut the fuck up',
-    'why you so stupid'
+resp_dir = [
+    './tests/data/en_rude_sentences.txt',
+    './tests/data/th_rude_sentences.txt'
 ]
 
-th_rude_sentences = [
-    'ควยไรสัส',
-    'เย็ดแม่',
-    'โง่',
-    'กากว่ะ',
-    'เงี่ยนว่ะ'
-]
+read_resp = []
+
+for resp in resp_dir:
+    with open(resp, 'r', encoding = 'utf-8') as read:
+        read_resp.append(read.readlines())
+
+(en_rude_sentences, th_rude_sentences) = read_resp
 
 def test_badwords_th():
     
