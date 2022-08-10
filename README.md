@@ -33,7 +33,7 @@ pip install --upgrade -r requirements.txt
 
 ## Testing & Debugging
 
-You can test the outcome of your intents by running **[this](./cli_tester.py)** testing python file.
+You can test the outcome of your intents by running interactive intents tester from **[this](./cli_tester.py)** file.
 
 This testing file show the tokenized input messages and how the bot is responding back to you in command-line interface.
 
@@ -44,6 +44,18 @@ python cli_tester.py
 ### Examples of intents tester
 
 ![command-line tester](./assets/cli-test-preview.png)
+
+### Unit testing
+
+This project use pytest for testing.
+
+You can update the test case by editing files in **[tests](./tests/)** directory.
+
+To run the unit testing, use command:
+
+```sh
+pytest
+```
 
 ## Contributions
 
