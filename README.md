@@ -1,5 +1,7 @@
 # Celestial
 
+![Build Status](https://github.com/StrixzIV/Celestial/actions/workflows/test-and-lint.yml/badge.svg)
+
 a Python Discord chat bot who can talk with you in English and Thai.
 
 Invite our bot **[here](https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot)**.
