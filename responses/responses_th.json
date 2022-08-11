@@ -32,7 +32,7 @@
     "response": [
       "หนูไม่กินอะไรหรอกค่ะ ก็หนูเป็นบอทนี่เนอะ"
     ],
-    "list_of_words": ["กิน", "หิว", "ไหม"],
+    "list_of_words": ["กิน", "หิว"],
     "is_single_response": false,
     "required_word": []
   },
@@ -122,7 +122,7 @@
     "response": [
       "หนูเป็นบอทนะ หนูไม่มีตังติดตัวหรอกค่ะ"
     ],
-    "list_of_words": ["มี", "เงิน", "ตัง", "ให้ยืม", "ขอยืม", "ไหม"],
+    "list_of_words": ["มี", "เงิน", "ตังหน่อย", "ให้ยืม", "ขอยืม"],
     "is_single_response": false,
     "required_word": []
   },
@@ -196,7 +196,7 @@
       "คุณพี่ควรไปนอนได้แล้วนะคะ",
       "หนูว่าพี่ไปนอนเถอะค่ะ เดี๋ยวร่างกายจะไม่ไหวเอานะ"
     ],
-    "list_of_words": ["ง่วง"],
+    "list_of_words": ["ง่วง", "นอน"],
     "is_single_response": false,
     "required_word": []
   },
@@ -212,7 +212,7 @@
     "response": [
       "ไม่รู้สิ พ่อไม่เคยบอกหนูอะ"
     ],
-    "list_of_words": ["มี","พี่น้อง"],
+    "list_of_words": ["พี่น้อง"],
     "is_single_response": false,
     "required_word": []
   }
