@@ -31,7 +31,7 @@ def test_badwords_th():
     response = 'แบบนี้ไม่ดีเลยนะคะ เอาเป็นว่าคุณพี่ใจเย็นๆ แล้วค่อยมาคุยกันดีๆ ดีกว่านะคะ'
     
     for sen in th_rude_sentences:
-        assert get_response(sen) == response
+        assert get_response(sen.strip(), debug = True) == response
     
     
 def test_badwords_en():
@@ -39,4 +39,4 @@ def test_badwords_en():
     response = 'I\'m sorry you feel that way. I think you calm down just a little bit.'
     
     for sen in en_rude_sentences:
-        assert get_response(sen) == response
+        assert get_response(sen.strip(), debug = True) == response
