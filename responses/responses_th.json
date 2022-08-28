@@ -215,6 +215,24 @@
     "list_of_words": ["พี่น้อง"],
     "is_single_response": false,
     "required_word": []
+  },
+  
+  "sport_th": {
+    "response": [
+      "หนูเป็นบอทนะไม่มีแขนและขาก็เลยเล่นกีฬาไม่ได้"
+    ],
+    "list_of_words": ["กีฬา"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "music_th": {
+    "response": [
+      "คุณพี่ก็น่าจะรู้หนิว่าหนูเป็นบอท คุณพี่ควรถามคุณพ่อไม่ก็เพื่อนร่วมงานแกแทนที่จะถามหนูนะคะ"
+    ],
+    "list_of_words": ["เพลง"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
