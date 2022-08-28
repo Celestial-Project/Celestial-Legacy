@@ -1,5 +1,7 @@
 # Celestial
 
+![Build Status](https://github.com/StrixzIV/Celestial/actions/workflows/test-and-lint.yml/badge.svg)
+
 a Python Discord chat bot who can talk with you in English and Thai.
 
 Invite our bot **[here](https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot)**.
@@ -33,7 +35,7 @@ pip install --upgrade -r requirements.txt
 
 ## Testing & Debugging
 
-You can test the outcome of your intents by running **[this](./cli_tester.py)** testing python file.
+You can test the outcome of your intents by running interactive intents tester from **[this](./cli_tester.py)** file.
 
 This testing file show the tokenized input messages and how the bot is responding back to you in command-line interface.
 
@@ -44,6 +46,18 @@ python cli_tester.py
 ### Examples of intents tester
 
 ![command-line tester](./assets/cli-test-preview.png)
+
+### Unit testing
+
+This project use pytest for testing.
+
+You can update the test case by editing files in **[tests](./tests/)** directory.
+
+To run the unit testing, use command:
+
+```sh
+pytest
+```
 
 ## Contributions
 

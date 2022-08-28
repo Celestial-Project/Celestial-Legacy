@@ -1,4 +1,3 @@
-import re
 import random
 import json
 import pythainlp
@@ -119,7 +118,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
         Parse string text input and find the best response for the sentence.
     '''
 
-    split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False)
+    split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False, engine = 'nercut')
     split_text = [e.lower() for e in split_text]
 
     response = check_all_msg(split_text, dt.date.today())
