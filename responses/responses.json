@@ -216,6 +216,24 @@
     "list_of_words": ["have","siblings"],
     "is_single_response": false,
     "required_word": []
+  },
+
+  "sport": {
+    "response": [
+      "Um... I'm a bot. I don't have any arms and legs so I can't play any sport."
+    ],
+    "list_of_words": ["sport"],
+    "is_single_response": false,
+    "required_word": []
+  },
+
+  "music": {
+    "response": [
+      "You know that I'm a bot right? Well why don't you ask my dad or his coworker instead of me."
+    ],
+    "list_of_words": ["music"],
+    "is_single_response": false,
+    "required_word": []
   }
 
 }
