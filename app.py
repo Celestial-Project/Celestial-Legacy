@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
@@ -17,3 +19,7 @@ def send_response():
         print(body)
         
         return ({'chat': get_response(body['message'])}, 200) if body is not None else ({}, 401)
+    
+
+if __name__ == '__main__':
+    app.run(debug = True, host = '0.0.0.0', port = int(os.environ.get('PORT', 8080)))
