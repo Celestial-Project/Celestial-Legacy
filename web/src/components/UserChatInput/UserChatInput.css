@@ -1,0 +1,16 @@
+.user-chat-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.btn-submit {
+    background-color: #464646;
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    border-color: #ffffff;
+    background-color: #242424;
+    transition: var(--transition);
+}
