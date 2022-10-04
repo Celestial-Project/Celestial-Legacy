@@ -3,7 +3,7 @@ import get_response from '../../../API/get_response'
 
 import './UserChatInput.css'
 
-const UserChatInput = () => {
+const UserChatInput = (): JSX.Element => {
     
     const [text, setText] = useState('-- Please submit a input --')
     const [input, setInput] = useState('')
@@ -28,7 +28,8 @@ const UserChatInput = () => {
                     className="user-input"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    ></textarea>
+                >
+                </textarea>
 
                 <button onClick={handleChat} className="btn-submit">Press me!</button>
 
