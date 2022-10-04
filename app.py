@@ -15,11 +15,8 @@ def send_response():
     
     if request.method == 'POST':
         body = request.get_json()
-        
-        print(body)
-        
-        return ({'chat': get_response(body['message'])}, 200) if body is not None else ({}, 401)
+        return ({'chat': get_response(body['message'])}, 200) if body is not None else ({}, 400)
     
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', debug = True)
+    app.run(host = '0.0.0.0', port = 5000, debug = False)
