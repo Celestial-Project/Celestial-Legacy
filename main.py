@@ -16,7 +16,7 @@ load_dotenv()
 
 modList = [int(os.getenv('ID1'))]
 
-def is_owner(ctx) -> bool:
+def is_owner(ctx: commands.Context) -> bool:
     
     '''
         Check if the command user is authorized.
@@ -27,19 +27,19 @@ def is_owner(ctx) -> bool:
     
 
 @client.event
-async def on_ready():
+async def on_ready() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
     print(f'\u001b[45;1m ** \u001b[0m Successfully logged in as: {client.user}')
     
 
 @client.command(name = 'usr>')
-async def answer(ctx, *msg):
+async def answer(ctx: commands.Context, *msg: list[str]) -> None:
     await ctx.send(chat_response.get_response(' '.join(list(msg))))
     
     
 @client.command(name = '!reload>')
 @commands.check(is_owner)
-async def reload_bot(ctx):
+async def reload_bot(ctx: commands.Context) -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
     git.Repo(os.getcwd()).remotes.upstream.pull('master')
@@ -47,7 +47,7 @@ async def reload_bot(ctx):
     
 
 @reload_bot.error
-async def on_reload_error(ctx, error):
+async def on_reload_error(ctx: commands.Context, error: commands.errors.NotOwner) -> None:
     
     error_embed = nextcord.Embed(title='⚠️ Error ⚠️', description='Reload attempt from non-authorized user.', color=0xFF0000)
     
