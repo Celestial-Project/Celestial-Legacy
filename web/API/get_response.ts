@@ -1,6 +1,6 @@
 const get_response = async (message: string = ""): Promise<string> => {
 
-    const response = await fetch('http://127.0.0.1:5000/celestial-api', {
+    const response = await fetch('http://127.0.0.1:8080/celestial-api', {
       method: 'POST',
       mode: 'cors',
       cache: 'no-cache', 
