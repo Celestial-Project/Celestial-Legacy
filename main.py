@@ -11,7 +11,7 @@ intents.message_content = True
 
 use_debug_mode = False
 
-client = commands.Bot(command_prefix = '::<' if use_debug_mode else '<', intents = intents)
+client = commands.Bot(command_prefix = '::<' if use_debug_mode else '<', intents = intents, help_command = None)
 
 load_dotenv()
 
