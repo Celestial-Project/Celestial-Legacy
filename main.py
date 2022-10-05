@@ -10,7 +10,7 @@ from importlib import reload
 intents = nextcord.Intents.default()
 intents.message_content = True
 
-client = commands.Bot(command_prefix = '<')
+client = commands.Bot(command_prefix = '::<', intents = intents)
 
 load_dotenv()
 
@@ -33,7 +33,7 @@ async def on_ready() -> None:
     
 
 @client.command(name = 'usr>')
-async def answer(ctx: commands.Context, *msg: list[str]) -> None:
+async def answer(ctx: commands.Context, *msg: str) -> None:
     await ctx.send(chat_response.get_response(' '.join(list(msg))))
     
     
