@@ -9,7 +9,9 @@ from importlib import reload
 intents = nextcord.Intents.default()
 intents.message_content = True
 
-client = commands.Bot(command_prefix = '::<', intents = intents)
+use_debug_mode = False
+
+client = commands.Bot(command_prefix = '::<' if use_debug_mode else '<', intents = intents)
 
 load_dotenv()
 
