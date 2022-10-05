@@ -52,10 +52,9 @@ async def reload_bot(ctx: commands.Context) -> None:
 @reload_bot.error
 async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None:
     
-    error_embed = nextcord.Embed(title='⚠️ Error ⚠️', description='Reload attempt from non-authorized user.', color=0xFF0000)
+    error_embed = nextcord.Embed(title='⚠️ Permission Error ⚠️', description='Reload attempt from non-authorized user.', color=0xFF0000)
     
     print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {ctx.author} which is not an authorized user.')
     await ctx.send(embed=error_embed)
     
-        
 client.run(os.getenv('TOKEN'))
