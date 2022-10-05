@@ -4,6 +4,10 @@
 
 a Python Discord chat bot who can talk with you in English and Thai.
 
+This project use **[LST20 Corpus](https://huggingface.co/datasets/lst20)** dataset from NECTEC as a base for the chat processing module.
+
+The full documentation of the corpus is available **[here](https://arxiv.org/pdf/2008.05055.pdf)** for more details.
+
 Invite our bot **[here](https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot)**.
 
 ## Usage
