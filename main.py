@@ -1,4 +1,5 @@
 import os
+import git 
 import nextcord
 import chat_response
 from dotenv import load_dotenv
@@ -58,5 +59,24 @@ async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None
     
     print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {ctx.author} which is not an authorized user.')
     await ctx.send(embed=error_embed)
+    
+    
+@client.command(name = '!pull>')
+@commands.check(is_owner)
+async def pull(ctx: commands.Context) -> None:
+    
+    print('\u001b[45;1m ** \u001b[0m Pulling from origin...')
+    
+    repo = git.Repo(os.getcwd())
+    repo.remote('origin').pull()
+    
+    print('\u001b[45;1m ** \u001b[0m Pull complete.')
+    print('\u001b[45;1m ** \u001b[0m Reloading chat module...')
+    
+    reload(chat_response)
+    
+    print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
+    print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {ctx.author}')
+    
     
 client.run(os.getenv('TOKEN'))
