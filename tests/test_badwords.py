@@ -10,7 +10,7 @@ sys.path.insert(0, parentdir)
 
 from chat_response import get_response
 
-with open('./responses/badwords.json') as f:
+with open('./responses/badwords.json', encoding = "utf-8") as f:
     bw = json.load(f)
     
 resp_dir = [
