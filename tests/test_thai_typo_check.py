@@ -1,7 +1,7 @@
 import json
 import pytest
 
-with open('./responses/responses_th.json') as f:
+with open('./responses/responses_th.json', encoding = "utf-8") as f:
     res_th = json.load(f)
 
 
