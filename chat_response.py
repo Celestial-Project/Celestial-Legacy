@@ -1,9 +1,11 @@
-import random
-import json
-import pythainlp
 import sys
+import json
+import random
+import pythainlp
 
 import datetime as dt
+
+from time import perf_counter
 
 # check if python > 3.9
 if sys.version_info[0:2] < (3, 9):
@@ -118,13 +120,18 @@ def get_response(input_text: str, debug: bool = False) -> str:
         Parse string text input and find the best response for the sentence.
     '''
 
+    start_timer = perf_counter()
+
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False, engine = 'nercut')
     split_text = [e.lower() for e in split_text]
 
     response = check_all_msg(split_text, dt.date.today())
     
+    end_timer = perf_counter()
+
     if debug:
         print(f'\u001b[42;1m -> \u001b[0m Incoming: {split_text}')
         print(f'\u001b[41;1m <- \u001b[0m Response with: {response}')
+        print(f'\u001b[45;1m ** \u001b[0m Response time: {round((end_timer - start_timer) * 1000, 4)} ms')
         
     return response
