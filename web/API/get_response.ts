@@ -1,4 +1,4 @@
-const get_response = async (message: string = ""): Promise<string> => {
+const get_response = async (message: string = "", debug: boolean = false): Promise<string> => {
 
     const response = await fetch('http://127.0.0.1:8080/celestial-api', {
       method: 'POST',
@@ -17,8 +17,11 @@ const get_response = async (message: string = ""): Promise<string> => {
     })
 
     const data = await response.json()
-    console.log(data)
 
+    if (debug){
+      console.log(data)
+    }
+    
     return data.chat
 
 }
