@@ -1,4 +1,4 @@
-nextcord>="^2.0.0rc2"
+nextcord>="^2.2.0"
 python-dotenv>="0.20.0"
 pythainlp>="3.0.8"
 numpy>="1.23.0"
