@@ -3,6 +3,8 @@ from flask_cors import CORS, cross_origin
 
 from chat_response import get_response
 
+debug = False
+
 app = Flask(__name__)
 cors = CORS(app)
 app.config['MAX_CONTENT_LENGTH'] = 1024
@@ -17,4 +19,10 @@ def send_response():
     
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', port = 21250, debug = False)
+    
+    if debug:
+        app.run(host = '0.0.0.0', port = 21250, debug = True)
+    
+    else:
+        from waitress import serve
+        serve(app, host = '0.0.0.0', port = 21250)
