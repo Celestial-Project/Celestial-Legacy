@@ -1,6 +1,10 @@
+interface ChatResponse {
+  chat: string;
+}
+
 const get_response = async (message: string = "", debug: boolean = false): Promise<string> => {
 
-    const response = await fetch('http://127.0.0.1:8080/celestial-api', {
+    const response = await fetch('http://celestialapi.trueddns.com:21250/celestial-api', {
       method: 'POST',
       mode: 'cors',
       cache: 'no-cache', 
@@ -16,7 +20,7 @@ const get_response = async (message: string = "", debug: boolean = false): Promi
       })
     })
 
-    const data = await response.json()
+    const data: ChatResponse = await response.json()
 
     if (debug){
       console.log(data)
