@@ -1,0 +1,38 @@
+.title {
+    overflow: hidden; 
+    border-right: .15em solid #ffffff; 
+    white-space: nowrap; 
+    margin: 0 215px; 
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    color: #ffffff; 
+    font-family: 'Helvetica Neue';
+  
+    font-size: 52px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;
+    padding: 0.3rem 0 0.3rem 0;
+}
+
+.desc {
+    margin-top: 1rem;
+}
+
+.waves {
+    width: 100%;
+    margin-top: -25%;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffffff; }
+}
