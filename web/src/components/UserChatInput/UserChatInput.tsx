@@ -13,7 +13,7 @@ const UserChatInput = (): JSX.Element => {
     }
   
     return (
-        <div className="user-demo">
+        <section className="user-demo" id='demo'>
 
             <h1>Live demo</h1>
             <h3>Try the live demo of our chatbot here!</h3>
@@ -35,7 +35,7 @@ const UserChatInput = (): JSX.Element => {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 
