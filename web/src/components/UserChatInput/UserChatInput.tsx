@@ -15,23 +15,25 @@ const UserChatInput = (): JSX.Element => {
     return (
         <section className="user-demo" id='demo'>
 
-            <h1>Live demo</h1>
-            <h3>Try the live demo of our chatbot here!</h3>
+            <h1 className="text-6xl font-semibold">Live demo</h1>
+            <h3 className="text-base mt-3.5">Try the live demo of our chatbot here!</h3>
 
-            <div className="user-chat-container">
+            <div className=" flex flex-col gap-4 mt-10">
 
-                <p className="response-text">{text}</p>
+                <p className="text-base">{text}</p>
                 
                 <textarea 
                     id="userInput" 
                     name="userInput" 
-                    className="user-input"
+                    rows={1}
+                    className="block p-3 mx-14 min-w-max text-sm rounded-lg border border-gray-300"
                     value={input}
+                    placeholder="Say someting to Celestial-chan here!"
                     onChange={(e) => setInput(e.target.value)}
                 >
                 </textarea>
 
-                <button onClick={handleChat} className="btn-submit">Press me!</button>
+                <button onClick={handleChat} className="text-white bg-[#464646] hover:bg-[#242424] hover:border-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-xl text-sm px-5 py-2.5 mx-14">Press me!</button>
 
             </div>
 
