@@ -1,5 +1,4 @@
-import Waves from '../../assets/layered-waves-haikei.svg'
-
+import DoubleWaves from './DoubleWaves'
 import './Header.css'
 
 const Header = () => {
@@ -11,7 +10,7 @@ const Header = () => {
           <article className='desc'>Celestial, a NLP-based discord chatbot who could talk to you in Thai and English</article>
         </div> 
 
-        <img src={Waves} alt='waves' className='waves' />
+        <DoubleWaves />
 
     </section>
   )
