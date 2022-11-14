@@ -23,6 +23,10 @@ const Navbar = () => {
                     <li>
                         <a href='https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=414464863296&scope=bot'>Invite</a>
                     </li>
+                   
+                    <li>
+                        <a href='https://github.com/StrixzIV/Celestial'>Github</a>
+                    </li>
                     
                     <li>
                         <a href='#demo'>Live demo</a>
