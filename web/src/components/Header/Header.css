@@ -6,20 +6,19 @@
     overflow: hidden; 
     border-right: .15em solid #ffffff; 
     white-space: nowrap; 
-    margin: 0 215px; 
+    margin: 0 auto; 
     letter-spacing: .15em;
     animation: 
-      typing 3.5s steps(40, end),
+      typing 3.5s steps(50, end),
       blink-caret .75s step-end infinite;
-    color: #ffffff; 
-    font-family: Kanit;
-  
-    font-size: 52px; 
+    color: #ffffff;
+    font-size: 4rem; 
     font-weight: bold; 
-    letter-spacing: -1px; 
+    letter-spacing: .1rem; 
     line-height: 1; 
     text-align: center;
-    padding: 0.3rem 0 0.3rem 0;
+    padding: 0.3rem;
+    max-width: max-content;
 }
 
 .desc {
@@ -33,10 +32,28 @@
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 70% }
+    to { width: 100% }
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: #ffffff; }
+}
+
+@media screen and (max-width: 769px) {
+    
+    .title {
+        font-size: 0.95rem;
+        
+    }
+
+    .desc {
+        font-size: 0.7rem;
+        margin: 1rem 3rem 0 3rem;
+    }
+
+    .waves {
+        margin-top: 12rem;
+    }
+
 }
