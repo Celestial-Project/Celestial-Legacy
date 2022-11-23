@@ -1,3 +1,4 @@
+import re
 import sys
 import json
 import random
@@ -27,6 +28,20 @@ for resp in resp_dir:
 
 (res_en, res_th, fes_en, fes_th, badwords) = read_resp
 
+def detect_thai(list_of_words: list[str]) -> str:
+    
+    thai_prob = 0
+    regexp = re.compile(r'[กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์ํ๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿]')
+    
+    for word in list_of_words:
+        if regexp.search(word):
+            thai_prob += 1
+            
+    percentage = round((thai_prob / len(list_of_words)) * 100, 2)
+    
+    return True if percentage >= 50 else False
+    
+
 def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> int:
 
     '''
@@ -54,7 +69,7 @@ def msg_probability(input_text: str, reconized_word: set[str], single_response: 
         return 0
     
     
-def check_all_msg(message: list[str], date: dt.datetime) -> str:
+def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
 
     '''
         Check all the word in the tokenized string list and return the best response
@@ -108,7 +123,11 @@ def check_all_msg(message: list[str], date: dt.datetime) -> str:
             required_words = set(fes_res_data[fes_res]['required_word'])
         )
         
-    unknown_response = ['Could you re-phrase that?', '...', 'Sounds about right', 'What does that mean?']   
+    unknown_response_en = ['Could you re-phrase that?', '...', 'Sounds about right', 'What does that mean?']   
+    unknown_response_th = ['เมื่อกี้ว่าไงนะคะ?', '...', 'ก็น่าจะดีนะคะ', 'หมายความว่าไงคะ?']   
+    
+    unknown_response = unknown_response_th if is_thai else unknown_response_en
+    
     best_match = max(highest_prob_list, key = highest_prob_list.get)
     
     return random.choice(unknown_response) if highest_prob_list[best_match] < 1 else best_match
@@ -124,8 +143,10 @@ def get_response(input_text: str, debug: bool = False) -> str:
 
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False, engine = 'nercut')
     split_text = [e.lower() for e in split_text]
+    
+    is_thai = detect_thai(split_text)
 
-    response = check_all_msg(split_text, dt.date.today())
+    response = check_all_msg(split_text, is_thai, dt.date.today())
     
     end_timer = perf_counter()
 
