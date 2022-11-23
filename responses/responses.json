@@ -231,9 +231,9 @@
     "response": [
       "You know that I'm a bot right? Well why don't you ask my dad or his coworker instead of me."
     ],
-    "list_of_words": ["music"],
+    "list_of_words": ["music", "you", "listening"],
     "is_single_response": false,
-    "required_word": []
+    "required_word": ["music"]
   },
 
   "nice2meet_u": {
