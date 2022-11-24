@@ -31,7 +31,7 @@ for resp in resp_dir:
 def detect_thai(list_of_words: list[str]) -> str:
     
     thai_prob = 0
-    regexp = re.compile(r'[กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์ํ๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿]')
+    regexp = re.compile(rf'[{pythainlp.thai_characters}]')
     
     for word in list_of_words:
         if regexp.search(word):
