@@ -28,7 +28,7 @@ for resp in resp_dir:
 
 (res_en, res_th, fes_en, fes_th, badwords) = read_resp
 
-def detect_thai(list_of_words: list[str]) -> str:
+def detect_thai(list_of_words: list[str]) -> bool:
     
     thai_prob = 0
     regexp = re.compile(rf'[{pythainlp.thai_characters}]')
