@@ -17,7 +17,8 @@ resp_dir = [
     './responses/responses_th.json',
     './responses/festivals.json',
     './responses/festivals_th.json',
-    './responses/badwords.json'
+    './responses/badwords.json',
+    './responses/unknown_responses.json'
 ]
 
 read_resp = []
@@ -26,7 +27,13 @@ for resp in resp_dir:
     with open(resp, 'r', encoding = 'utf-8') as read:
         read_resp.append(json.load(read))
 
-(res_en, res_th, fes_en, fes_th, badwords) = read_resp
+(res_en, res_th, fes_en, fes_th, badwords, unknown_responses) = read_resp
+
+res_data = res_en | res_th
+fes_res_data = fes_en | fes_th
+
+unknown_response_en = unknown_responses['en']   
+unknown_response_th = unknown_responses['th']
 
 def detect_thai(list_of_words: list[str]) -> bool:
     
@@ -77,9 +84,6 @@ def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
 
     highest_prob_list = {}
     
-    res_data = res_en | res_th
-    fes_res_data = fes_en | fes_th
-    
     for e in message:
         if e in set(badwords['en']):
             return 'I\'m sorry you feel that way. I think you calm down just a little bit.'
@@ -122,9 +126,6 @@ def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
             single_response = fes_res_data[fes_res]['is_single_response'], 
             required_words = set(fes_res_data[fes_res]['required_word'])
         )
-        
-    unknown_response_en = ['Could you re-phrase that?', '...', 'Sounds about right', 'What does that mean?']   
-    unknown_response_th = ['เมื่อกี้ว่าไงนะคะ?', '...', 'ก็น่าจะดีนะคะ', 'หมายความว่าไงคะ?']   
     
     unknown_response = unknown_response_th if is_thai else unknown_response_en
     
