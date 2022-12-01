@@ -6,7 +6,7 @@
         ],
         "list_of_words": ["สวัสดี", "ปีใหม่"],
         "is_single_response": false,
-        "required_word": [],
+        "required_word": ["ปีใหม่"],
         "date": 31,
         "month": 12
     },
@@ -18,7 +18,7 @@
         ],
         "list_of_words": ["สวัสดี", "ปีใหม่"],
         "is_single_response": false,
-        "required_word": [],
+        "required_word": ["ปีใหม่"],
         "date": [1, 2],
         "month": 1
     },
