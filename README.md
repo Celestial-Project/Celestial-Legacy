@@ -65,7 +65,7 @@ pytest
 
 ## Contributions
 
-You can contribute to this project by updating the intent JSON files in **[responses](./responses)** folder.
+You can contribute to this project by updating the intent JSON files in **[responses](./responses)** folder (Please take a look at **[chat intents development guide](./docs/chat_intents_guide.md)**).
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
