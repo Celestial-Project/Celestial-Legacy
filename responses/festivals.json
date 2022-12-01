@@ -1,14 +1,26 @@
 {
     "new_year": {
         "response": [
-            "New year",
-            "Not new year"
+            "Happy new year! I hope next year would be a great year!",
+            "It's not new year yet."
         ],
-        "list_of_words": ["new","year"],
+        "list_of_words": ["happy", "new", "year"],
         "is_single_response": false,
         "required_word": [],
         "date": 31,
         "month": 12
+    },
+    
+    "new_year2": {
+        "response": [
+            "Happy new year! I hope this year would be a great year!",
+            "It's not new year yet."
+        ],
+        "list_of_words": ["happy", "new", "year"],
+        "is_single_response": false,
+        "required_word": [],
+        "date": [1, 2],
+        "month": 1
     }
 
 }

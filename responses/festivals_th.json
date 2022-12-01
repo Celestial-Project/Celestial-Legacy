@@ -1,14 +1,26 @@
 {
     "new_year": {
         "response": [
-            "New year",
-            "Not new year"
+            "สวัสดีปีใหม่ค่า ของให้ปีหน้าเป็นปีที่ดีนะคะ",
+            "นี่ยังไม่ถึงวันปีใหม่เลยนะคะ"
         ],
-        "list_of_words": ["new","year"],
+        "list_of_words": ["สวัสดี", "ปีใหม่"],
         "is_single_response": false,
         "required_word": [],
         "date": 31,
         "month": 12
+    },
+    
+    "new_year2": {
+        "response": [
+            "สวัสดีปีใหม่ค่า ของให้ปีนี้เป็นปีที่ดีนะคะ",
+            "นี่ยังไม่ถึงวันปีใหม่เลยนะคะ"
+        ],
+        "list_of_words": ["สวัสดี", "ปีใหม่"],
+        "is_single_response": false,
+        "required_word": [],
+        "date": [1, 2],
+        "month": 1
     },
 
     "songkran": {
