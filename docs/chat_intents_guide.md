@@ -14,7 +14,7 @@ This kind of chat intents is use for normal chat responses that does not require
     ],
     "is_single_response": false,
     "required_word": ["love", "bot"]
-},
+}
 ```
 
 * **response**: List of message that the bot will replied (If the date is match, the bot will reply with first response. If not, it will reply with the second response)
@@ -39,7 +39,7 @@ A chat intents that uses datetime with the keyword detection to output a cetrain
     "required_word": ["new", "year"],
     "date": 31,
     "month": 12
-},
+}
 ```
 
 * **response**: List of message that the bot will replied (If the date is match, the bot will reply with first response. If not, it will reply with the second response)
