@@ -34,7 +34,7 @@ You can take a look of a dependencies list **[here](./requirements.txt)**.
 You can download the dependencies for development by using command:
 
 ```sh
-pip install --upgrade -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Testing & Debugging
