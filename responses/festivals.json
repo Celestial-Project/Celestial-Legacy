@@ -1,5 +1,5 @@
 {
-    "new_year": {
+    "new_year_en": {
         "response": [
             "Happy new year! I hope next year would be a great year!",
             "It's not new year yet."
@@ -11,7 +11,7 @@
         "month": 12
     },
     
-    "new_year2": {
+    "new_year2_en": {
         "response": [
             "Happy new year! I hope this year would be a great year!",
             "It's not new year yet."
