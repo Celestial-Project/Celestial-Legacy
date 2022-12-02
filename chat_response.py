@@ -142,7 +142,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
 
     start_timer = perf_counter()
     
-    input_text = re.sub(r'[^\w\s]', '', input_text)
+    input_text = re.sub(r'[\^!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~]', '', input_text)
 
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False, engine = 'nercut')
     split_text = [e.lower() for e in split_text]
