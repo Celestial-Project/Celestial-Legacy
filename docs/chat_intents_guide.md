@@ -1,10 +1,10 @@
-# Chat intents development guide
+# Chat Intent Development Manual
 
-This is a guide for Celestial's chat intents development
+This is a guide for Celestial's chat intent development.
 
 ## Non-festival chat intents
 
-This kind of chat intents is use for normal chat responses that does not required a datetime data
+This kind of chat intent is used for normal chat responses that do not require datetime data.
 
 ```json
 "thanks": {
@@ -17,16 +17,16 @@ This kind of chat intents is use for normal chat responses that does not require
 }
 ```
 
-* **response**: List of message that the bot will replied (If the date is match, the bot will reply with first response. If not, it will reply with the second response)
+* **response**: a list of messages that the bot will respond to.
 * **list_of_word**: A keyword list that you want to detect in the input message
-* **is_single_response**: Is those keyword only come in a single word input
-* **required_word**: A keyword list that required for the response to happened
+* **is_single_response**: Is that those keywords are only available as single words?
+* **required_word**: A list of words that must be typed in order for the response to occur.
 
 ## Festival chat intents
 
-A chat intents that uses datetime with the keyword detection to output a cetrain message
+A chat intent that outputs a cetrain message by combining datetime and keyword detection.
 
-### Single-day festival
+### A one-day festival
 
 ```json
 "new_year_en": {
@@ -42,14 +42,14 @@ A chat intents that uses datetime with the keyword detection to output a cetrain
 }
 ```
 
-* **response**: List of message that the bot will replied (If the date is match, the bot will reply with first response. If not, it will reply with the second response)
+* **response**: A list of messages to which the bot will respond If the dates are the same, the bot will respond with its first response. If not, it will reply with the second response.
 * **list_of_word**: A keyword list that you want to detect in the input message
-* **is_single_response**: Is those keyword only come in a single word input
-* **required_word**: A keyword list that required for the response to happened
-* **date**: a date that the festival is taken
-* **month**: a month that the festival is taken
+* **is_single_response**: Is that those keywords are only available as single words?
+* **required_word**: A list of words that must be typed in order for the response to occur.
+* **date**: the day the festival is held
+* **month**: the month in which the festival is held.
 
-### Multiple-day (ranged) festival
+### Variable-length festival
 
 ```json
 "new_year2_en": {
@@ -65,9 +65,9 @@ A chat intents that uses datetime with the keyword detection to output a cetrain
 }
 ```
 
-* **response**: List of message that the bot will replied (If the date is match, the bot will reply with first response. If not, it will reply with the second response)
+* **response**: A list of messages to which the bot will respond If the dates are the same, the bot will respond with its first response. If not, it will reply with the second response.
 * **list_of_word**: A keyword list that you want to detect in the input message
-* **is_single_response**: Is those keyword only come in a single word input
-* **required_word**: A keyword list that required for the response to happened
-* **date**: a date range that the festival is taken (For this example, the date range is 1st January to 2nd January)
-* **month**: a month that the festival is taken
+* **is_single_response**: Is that those keywords are only available as single words?
+* **required_word**: A list of words that must be typed in order for the response to occur.
+* **date**: a date range for which the festival is held(For this example, the date range is January 1 to January 2.)
+* **month**: the month in which the festival is held.
