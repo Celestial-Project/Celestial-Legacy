@@ -4,7 +4,7 @@
 
 a Python-based Discord chat bot who can talk with you in English and Thai.
 
-This project use **[LST20 Corpus](https://huggingface.co/datasets/lst20)** dataset from NECTEC as a base for the chat processing module.
+This project uses **[LST20 Corpus](https://huggingface.co/datasets/lst20)** dataset from NECTEC as a base for the chat processing module.
 
 The full documentation of the corpus is available **[here](https://arxiv.org/pdf/2008.05055.pdf)** for more details.
 
@@ -29,9 +29,9 @@ to send your message to the bot.
 This project requires Python 3.9 or higher.
 This project uses **[Nextcord](https://github.com/nextcord/nextcord)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
 
-You can take a look of a dependencies list **[here](./requirements.txt)**.
+A list of dependencies can be found **[here](./requirements.txt)**.
 
-You can download the dependencies for development by using command:
+You can install dependencies for development by running:
 
 ```sh
 pip install -r requirements.txt
@@ -47,7 +47,7 @@ This testing file shows the tokenized input messages and how the bot is respondi
 python cli_tester.py
 ```
 
-### Examples of intents tester
+### Intents tester examples
 
 ![command-line tester](./assets/cli-test-preview.png)
 
@@ -69,7 +69,7 @@ You can contribute to this project by updating the intent JSON files in **[respo
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Make sure to read our code of conduct **[here](./CODE_OF_CONDUCT.md)** before start contributing to our project.
+Make sure to read our code of conduct **[here](./CODE_OF_CONDUCT.md)** before starting to contribute to our project.
 
 Please make sure to update the tests as appropriate.
 
