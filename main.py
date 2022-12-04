@@ -19,10 +19,6 @@ client = commands.Bot(
     activity = nextcord.Game(name = '<help> for more info.')
 )
 
-load_dotenv()
-
-modList = [int(os.getenv('ID1'))]
-
 def is_owner(ctx: commands.Context) -> bool:
     
     '''
@@ -121,4 +117,8 @@ async def pull(ctx: commands.Context) -> None:
     print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {ctx.author}')
     
 if __name__ == '__main__':
+
+    load_dotenv()
+
+    modList = [int(os.getenv('ID1'))]
     client.run(os.getenv('DEV'))
