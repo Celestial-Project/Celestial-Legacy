@@ -120,5 +120,5 @@ async def pull(ctx: commands.Context) -> None:
     print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
     print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {ctx.author}')
     
-    
-client.run(os.getenv('TOKEN'))
+if __name__ == '__main__':
+    client.run(os.getenv('DEV'))
