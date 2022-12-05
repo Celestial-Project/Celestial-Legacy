@@ -121,4 +121,4 @@ if __name__ == '__main__':
     load_dotenv()
 
     modList = [int(os.getenv('ID1'))]
-    client.run(os.getenv('DEV'))
+    client.run(os.getenv('TOKEN'))
