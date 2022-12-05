@@ -3,14 +3,16 @@
         "...", 
         "Sounds about right", 
         "What does that mean?",
-        "Could you re-phrase that?" 
+        "Could you re-phrase that?",
+        "What?" 
     ],
 
     "th": [
         "...", 
         "ก็น่าจะดีนะคะ", 
         "เมื่อกี้ว่าไงนะคะ?", 
-        "หมายความว่าไงคะ?"
+        "หมายความว่าไงคะ?",
+        "อะไรนะคะ?"
     ]
 
 }
