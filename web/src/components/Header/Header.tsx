@@ -1,4 +1,6 @@
 import DoubleWaves from './DoubleWaves'
+import Scrolldown from './Scrolldown'
+
 import './Header.css'
 
 const Header = () => {
@@ -10,7 +12,7 @@ const Header = () => {
           <article className='desc'>Celestial, a NLP-based discord chatbot who could talk to you in Thai and English</article>
         </div> 
 
-        <DoubleWaves />
+        <Scrolldown />
 
     </section>
   )
