@@ -5,7 +5,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <section className='header' id='header'>
+    <section className='header mb-0' id='header'>
         
         <div>
           <h1 className='title'>A NLP-based multilingual discord chatbot</h1>

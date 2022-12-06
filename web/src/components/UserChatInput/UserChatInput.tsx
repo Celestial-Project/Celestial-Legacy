@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import get_response from '../../../API/get_response'
 
+import Waves from '../../assets/layered-waves-haikei.svg'
+
 import './UserChatInput.css'
 
 const UserChatInput = (): JSX.Element => {
@@ -13,9 +15,11 @@ const UserChatInput = (): JSX.Element => {
     }
   
     return (
-        <section className="user-demo" id='demo'>
+        <section className="user-demo -mt-16">
 
-            <h1 className="text-6xl font-semibold">Live demo</h1>
+            <img src={Waves} alt="waves" className='rotate-180 scroll mix-blend-lighten max-md:-mt-1'/>
+
+            <h1 className="text-6xl font-semibold mt-32" id='demo'>Live demo</h1>
             <h3 className="text-base mt-3.5">Try the live demo of our chatbot here!</h3>
 
             <div className=" flex flex-col gap-4 mt-10">
