@@ -2,7 +2,7 @@
 
 ![Build Status](https://github.com/StrixzIV/Celestial/actions/workflows/test-and-lint.yml/badge.svg)
 
-a Python-based Discord chat bot who can talk with you in English and Thai.
+Celestial, an NLP-based Discord chatbot that can talk with you in English and Thai.
 
 This project uses **[LST20 Corpus](https://huggingface.co/datasets/lst20)** dataset from NECTEC as a base for the chat processing module.
 
@@ -65,7 +65,9 @@ pytest
 
 ## Contributions
 
-You can contribute to this project by updating the intent JSON files in **[responses](./responses)** folder (Please take a look at **[Chat Intent Development Manual](./docs/chat_intents_guide.md)**).
+You can contribute by creating new intents and responses for the chatbot by simply updating the intent JSON files in **[responses](./responses)** folder (Please take a look at **[Chat Intent Development Manual](./docs/chat_intents_guide.md)**).
+
+You can also suggest new features or improvements to the existing code by creating **[Feature request issue](https://github.com/StrixzIV/Celestial/issues/new?assignees=StrixzIV&labels=enhancement%2C+Feature+request&template=feature_request.md&title=Request%3A+)**.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
