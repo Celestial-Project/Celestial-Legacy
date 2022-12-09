@@ -9,6 +9,9 @@ print('\u001b[45;1m ** \u001b[0m Type -h or --help to see list of test macro and
 print('\u001b[45;1m ** \u001b[0m Press ctrl+c to exit.')
 
 def read_input(message: str) -> None:
+    
+    if not message:
+        return
 
     if message in {'--help', '-h'}:
         print('''
