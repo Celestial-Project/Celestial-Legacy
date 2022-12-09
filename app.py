@@ -19,9 +19,12 @@ app.config['MAX_CONTENT_LENGTH'] = 1024
 @app.route('/celestial-api', methods = ['POST'])
 def send_response():
     
-    if request.method == 'POST':
-        body = request.get_json()
-        return ({'chat': get_response(body['message'])}, 200) if body is not None else ({}, 400)
+    body = request.get_json()
+    
+    if body is None or body['message'] == '':
+        return ({}, 400)
+    
+    return ({'chat': get_response(body['message'])}, 200)
     
 
 if __name__ == '__main__':
