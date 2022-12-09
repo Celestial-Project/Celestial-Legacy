@@ -147,6 +147,9 @@ def get_response(input_text: str, debug: bool = False) -> str:
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False, engine = 'nercut')
     split_text = [e.lower() for e in split_text]
     
+    if len(split_text) == 1:
+        split_text = split_text[0].split()
+    
     is_thai = detect_thai(split_text)
 
     response = check_all_msg(split_text, is_thai, dt.date.today())
