@@ -50,13 +50,9 @@ def msg_probability(input_text: str, reconized_word: set[str], single_response: 
         Calculate the probability of the sentence and return a word certainty percentage.
     '''
 
-    message_certainty = 0
     has_required_word = True
     
-    for word in input_text:
-        if word in reconized_word:
-            message_certainty += 1
-            
+    message_certainty = sum(1 for word in input_text if word in reconized_word)
     percentage = float(message_certainty) / float(len(reconized_word))
     
     for word in required_words:
@@ -64,11 +60,7 @@ def msg_probability(input_text: str, reconized_word: set[str], single_response: 
             has_required_word = False
             break
         
-    if has_required_word or single_response:
-        return int(percentage * 100)
-    
-    else:
-        return 0
+    return int(percentage * 100) if has_required_word or single_response else 0
     
     
 def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
