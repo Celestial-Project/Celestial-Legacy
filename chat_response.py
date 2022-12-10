@@ -41,7 +41,7 @@ def detect_thai(list_of_words: list[str]) -> bool:
     thai_prob = sum(1 for word in list_of_words if regexp.search(word))
     percentage = round((thai_prob / len(list_of_words)) * 100, 2)
     
-    return True if percentage >= 50 else False
+    return percentage >= 50
     
 
 def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> int:
