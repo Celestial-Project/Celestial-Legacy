@@ -37,6 +37,10 @@ unknown_response_th = unknown_responses['th']
 
 def detect_thai(list_of_words: list[str]) -> bool:
     
+    '''
+        Determine of the list of string is Thai or not
+    '''
+    
     regexp = re.compile(rf'[{pythainlp.thai_characters}]')
     thai_prob = sum(1 for word in list_of_words if regexp.search(word))
     percentage = round((thai_prob / len(list_of_words)) * 100, 2)
