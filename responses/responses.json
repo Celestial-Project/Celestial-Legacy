@@ -157,7 +157,7 @@
     "response": [
       "My job is to make you have some fun when chatting with me"
     ],
-    "list_of_words": ["what", "is", "your", "job", "purpose"],
+    "list_of_words": ["what", "your", "job", "purpose"],
     "is_single_response": false,
     "required_word": []
   },
