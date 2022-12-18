@@ -19,14 +19,16 @@ def read_input(message: str) -> None:
             \u001b[43;1m macro \u001b[0m -r --reload \t Reload the chat module.
             \u001b[41;1m  ctl  \u001b[0m ^C ctrl+c \t\t Quit the program.
         ''')
+        
+        return
 
     elif message in {'--reload', '-r'}:
         os.system('cls' if os.name == 'nt' else 'clear')
         print('\u001b[45;1m ** \u001b[0m Reloading...')
         reload(chat_response)
+        return
                   
-    else:
-        chat_response.get_response(message, debug = True)
+    chat_response.get_response(message, debug = True)
 
 
 while True:
