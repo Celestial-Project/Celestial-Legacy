@@ -1,5 +1,4 @@
 import json
-import pytest
 
 from utils import move_pwd_up
 

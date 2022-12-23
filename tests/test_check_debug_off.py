@@ -1,5 +1,3 @@
-import pytest
-
 from utils import move_pwd_up
 
 move_pwd_up()
