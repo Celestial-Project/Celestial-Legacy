@@ -25,13 +25,19 @@ def send_response():
         return ({}, 400)
     
     return ({'chat': get_response(body['message'])}, 200)
+
+
+def main():
+
+    if not debug:
+
+        from waitress import serve
+        
+        serve(app, host = '0.0.0.0', port = 21250)
+        return
+
+    app.run(host = '0.0.0.0', port = 21250, debug = True)
     
 
 if __name__ == '__main__':
-    
-    if debug:
-        app.run(host = '0.0.0.0', port = 21250, debug = True)
-    
-    else:
-        from waitress import serve
-        serve(app, host = '0.0.0.0', port = 21250)
+    main()
