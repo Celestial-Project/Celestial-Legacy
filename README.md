@@ -51,17 +51,25 @@ python cli_tester.py
 
 ![command-line tester](./assets/cli-test-preview.png)
 
-### Unit testing
+### Unit Testing
 
 This project uses PyTest for testing.
 
-You can update the test case by editing files in the **[tests](./tests/)** directory.
+You can update or add test cases by editing the files in the **[tests](./tests/)** directory.
 
-To run the unit testing, use the command:
+Before pushing your code to the main branch, it's a good practice to run the unit tests to catch any bugs or issues as soon as possible.
+
+To run the unit tests, use the following command in your terminal:
 
 ```sh
 pytest
 ```
+
+This will execute all of the tests in the tests directory and report any failures.
+
+If any tests fail, it's important to debug and fix the issues before pushing your code to the main branch to avoid introducing new problems.
+
+If you are unable to fix a bug, it's a good idea to report it on the project's GitHub issues page **[here](https://github.com/StrixzIV/Celestial/issues/new?assignees=&labels=Wrong+response&template=bot-not-response-correctly.md&title=Bot+not+response+correctly%3A+)** so that it can be addressed by someone else.
 
 ## Contributions
 
