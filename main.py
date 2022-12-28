@@ -92,7 +92,11 @@ async def reload_bot(ctx: commands.Context) -> None:
 @reload_bot.error
 async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None:
     
-    error_embed = nextcord.Embed(title='⚠️ Permission Error ⚠️', description='Reload attempt from non-authorized user.', color=0xFF0000)
+    error_embed = nextcord.Embed(
+        title = '⚠️ Permission Error ⚠️', 
+        description = 'Reload attempt from non-authorized user.', 
+        color = 0xFF0000
+    )
     
     print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {ctx.author} which is not an authorized user.')
     await ctx.send(embed=error_embed)
@@ -115,6 +119,20 @@ async def pull(ctx: commands.Context) -> None:
     print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
     print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {ctx.author}')
     
+    
+@pull.error
+async def on_pull_error(ctx: commands.Context, error: commands.errors) -> None:
+    
+    error_embed = nextcord.Embed(
+        title = '⚠️ Permission Error ⚠️', 
+        description = 'Pull attempt from non-authorized user.', 
+        color = 0xFF0000
+    )
+    
+    print(f'\u001b[41;1m !! \u001b[0m Error: Pull attempt from {ctx.author} which is not an authorized user.')
+    await ctx.send(embed=error_embed)
+    
+
 if __name__ == '__main__':
 
     load_dotenv()
