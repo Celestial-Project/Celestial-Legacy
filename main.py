@@ -31,6 +31,7 @@ def is_owner(ctx: commands.Context) -> bool:
 @client.event
 async def on_ready() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
+    print(f'\u001b[45;1m ** \u001b[0m Status: {"Debug" if use_debug_mode else "Production"}')
     print(f'\u001b[45;1m ** \u001b[0m Successfully logged in as: {client.user}')
     
     
