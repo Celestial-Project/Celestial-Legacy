@@ -25,8 +25,7 @@ def is_owner(ctx: commands.Context) -> bool:
         Check if the command user is authorized.
     '''
     
-    if ctx.author.id in modList:
-        return ctx.author.id in modList
+    return ctx.author.id in moderator_ids
     
 
 @client.event
@@ -120,5 +119,8 @@ if __name__ == '__main__':
 
     load_dotenv()
 
-    modList = [int(os.getenv('ID1'))]
+    moderator_ids = {
+        int(os.getenv('ID1'))
+    }
+    
     client.run(os.getenv('TOKEN'))
