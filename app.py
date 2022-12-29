@@ -10,7 +10,7 @@ debug = False
 
 app = Flask(__name__)
 cors = CORS(app)
-limiter = Limiter(app, key_func = get_remote_address)
+limiter = Limiter(get_remote_address, app = app)
 
 app.config['MAX_CONTENT_LENGTH'] = 1024
 
