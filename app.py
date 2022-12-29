@@ -30,7 +30,7 @@ def send_response():
 def main():
 
     if debug:   
-        app.run(host = '0.0.0.0', port = 21250, debug = True)
+        app.run(host = '0.0.0.0', port = 21250)
         return
 
     from waitress import serve
