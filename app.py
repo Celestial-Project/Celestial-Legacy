@@ -29,14 +29,12 @@ def send_response():
 
 def main():
 
-    if not debug:
-
-        from waitress import serve
-        
-        serve(app, host = '0.0.0.0', port = 21250)
+    if debug:   
+        app.run(host = '0.0.0.0', port = 21250, debug = True)
         return
 
-    app.run(host = '0.0.0.0', port = 21250, debug = True)
+    from waitress import serve
+    serve(app, host = '0.0.0.0', port = 21250)
     
 
 if __name__ == '__main__':
