@@ -4,7 +4,9 @@
         "Sounds about right", 
         "What does that mean?",
         "Could you re-phrase that?",
-        "What?" 
+        "What?",
+        "Eh... what do you mean?",
+        "What do you mean?" 
     ],
 
     "th": [
@@ -12,7 +14,9 @@
         "ก็น่าจะดีนะคะ", 
         "เมื่อกี้ว่าไงนะคะ?", 
         "หมายความว่าไงคะ?",
-        "อะไรนะคะ?"
+        "อะไรนะคะ?",
+        "เอ๊ะ...หมายความว่าไงหรอคะ?",
+        "หมายความว่าอย่างไรหรอคะ?"
     ]
 
 }
