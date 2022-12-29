@@ -37,16 +37,15 @@ unknown_response_th = unknown_responses['th']
 
 def detect_thai(list_of_words: list[str]) -> bool:
     
-    thai_prob = 0
-    regexp = re.compile(rf'[{pythainlp.thai_characters}]')
+    '''
+        Determine of the list of string is Thai or not
+    '''
     
-    for word in list_of_words:
-        if regexp.search(word):
-            thai_prob += 1
-            
+    regexp = re.compile(rf'[{pythainlp.thai_characters}]')
+    thai_prob = sum(1 for word in list_of_words if regexp.search(word))
     percentage = round((thai_prob / len(list_of_words)) * 100, 2)
     
-    return True if percentage >= 50 else False
+    return percentage >= 50
     
 
 def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> int:
@@ -55,13 +54,9 @@ def msg_probability(input_text: str, reconized_word: set[str], single_response: 
         Calculate the probability of the sentence and return a word certainty percentage.
     '''
 
-    message_certainty = 0
     has_required_word = True
     
-    for word in input_text:
-        if word in reconized_word:
-            message_certainty += 1
-            
+    message_certainty = sum(1 for word in input_text if word in reconized_word)
     percentage = float(message_certainty) / float(len(reconized_word))
     
     for word in required_words:
@@ -69,11 +64,7 @@ def msg_probability(input_text: str, reconized_word: set[str], single_response: 
             has_required_word = False
             break
         
-    if has_required_word or single_response:
-        return int(percentage * 100)
-    
-    else:
-        return 0
+    return int(percentage * 100) if has_required_word or single_response else 0
     
     
 def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
@@ -116,7 +107,7 @@ def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
         if isinstance(fes_res_data[fes_res]['date'], int):
             date_frame = [dt.datetime(date.year, fes_res_data[fes_res]['month'], fes_res_data[fes_res]['date']).date()]
         
-        else:
+        elif isinstance(fes_res_data[fes_res]['date'], list):
             date_range = range(fes_res_data[fes_res]['date'][0], (fes_res_data[fes_res]['date'][1] + 1))
             date_frame =  [dt.datetime(date.year, fes_res_data[fes_res]['month'], d).date() for d in date_range]
         
@@ -146,6 +137,9 @@ def get_response(input_text: str, debug: bool = False) -> str:
 
     split_text = pythainlp.word_tokenize(input_text, keep_whitespace = False, engine = 'nercut')
     split_text = [e.lower() for e in split_text]
+    
+    if len(split_text) == 1:
+        split_text = split_text[0].split()
     
     is_thai = detect_thai(split_text)
 

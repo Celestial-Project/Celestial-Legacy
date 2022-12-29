@@ -19,16 +19,25 @@ app.config['MAX_CONTENT_LENGTH'] = 1024
 @app.route('/celestial-api', methods = ['POST'])
 def send_response():
     
-    if request.method == 'POST':
-        body = request.get_json()
-        return ({'chat': get_response(body['message'])}, 200) if body is not None else ({}, 400)
+    body = request.get_json()
+    
+    if body is None or body['message'] == '':
+        return ({}, 400)
+    
+    return ({'chat': get_response(body['message'])}, 200)
+
+
+def main():
+
+    if not debug:
+
+        from waitress import serve
+        
+        serve(app, host = '0.0.0.0', port = 21250)
+        return
+
+    app.run(host = '0.0.0.0', port = 21250, debug = True)
     
 
 if __name__ == '__main__':
-    
-    if debug:
-        app.run(host = '0.0.0.0', port = 21250, debug = True)
-    
-    else:
-        from waitress import serve
-        serve(app, host = '0.0.0.0', port = 21250)
+    main()
