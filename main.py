@@ -13,10 +13,10 @@ intents.message_content = True
 use_debug_mode = False
 
 client = commands.Bot(
-    command_prefix = '::<' if use_debug_mode else '<', 
+    command_prefix = '::<!' if use_debug_mode else '<!', 
     intents = intents, 
     help_command = None,
-    activity = nextcord.Game(name = '<help> for more info.')
+    activity = nextcord.Game(name = '<!help> for more info.')
 )
 
 def is_owner(ctx: commands.Context) -> bool:
@@ -33,6 +33,16 @@ async def on_ready() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
     print(f'\u001b[45;1m ** \u001b[0m Status: {"Debug" if use_debug_mode else "Production"}')
     print(f'\u001b[45;1m ** \u001b[0m Successfully logged in as: {client.user}')
+
+
+@client.event
+async def on_message(message: nextcord.Message) -> None:
+
+    if message.content.startswith('<usr>'):
+        chat_message = message.content.split('<usr>')[1].strip()
+        await message.channel.send(chat_response.get_response(chat_message, debug = use_debug_mode))
+
+    await client.process_commands(message)
     
     
 @client.command(name = 'help>')
@@ -71,13 +81,8 @@ async def helper(ctx: commands.Context) -> None:
     
     await ctx.send(embed = help_embed)
     
-
-@client.command(name = 'usr>')
-async def answer(ctx: commands.Context, *msg: str) -> None:
-    await ctx.send(chat_response.get_response(' '.join(list(msg)), debug = use_debug_mode))
     
-    
-@client.command(name = '!reload>')
+@client.command(name = 'reload>')
 @commands.check(is_owner)
 async def reload_bot(ctx: commands.Context) -> None:
     
@@ -103,7 +108,7 @@ async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None
     await ctx.send(embed=error_embed)
     
     
-@client.command(name = '!pull>')
+@client.command(name = 'pull>')
 @commands.check(is_owner)
 async def pull(ctx: commands.Context) -> None:
     
