@@ -142,9 +142,6 @@ async def on_pull_error(ctx: commands.Context, error: commands.errors) -> None:
 if __name__ == '__main__':
 
     load_dotenv()
-
-    moderator_ids = {
-        int(os.getenv('ID1'))
-    }
+    moderator_ids = set([ids for (key, ids) in os.environ.items() if key.startswith('ID')])
     
     client.run(os.getenv('TOKEN'))
