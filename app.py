@@ -10,7 +10,7 @@ debug = False
 
 app = Flask(__name__)
 cors = CORS(app)
-limiter = Limiter(app, key_func = get_remote_address)
+limiter = Limiter(get_remote_address, app = app)
 
 app.config['MAX_CONTENT_LENGTH'] = 1024
 
@@ -29,14 +29,12 @@ def send_response():
 
 def main():
 
-    if not debug:
-
-        from waitress import serve
-        
-        serve(app, host = '0.0.0.0', port = 21250)
+    if debug:   
+        app.run(host = '0.0.0.0', port = 21250)
         return
 
-    app.run(host = '0.0.0.0', port = 21250, debug = True)
+    from waitress import serve
+    serve(app, host = '0.0.0.0', port = 21250)
     
 
 if __name__ == '__main__':
