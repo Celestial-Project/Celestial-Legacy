@@ -25,10 +25,10 @@
 
     "songkran_th": {
         "response": [
-            "Songkran",
-            "Not songkran"
+            "สงกรานต์แล้วจ้า อย่าสาดน้ำให้หนูแล้วกัน",
+            "อยากสาดน้ำแล้วหรอ ยังไม่ถึงเวลานะ"
         ],
-        "list_of_words": ["songkran"],
+        "list_of_words": ["สงกรานต์"],
         "is_single_response": false,
         "required_word": [],
         "date": [13, 15],
