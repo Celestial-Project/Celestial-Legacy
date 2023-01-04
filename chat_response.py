@@ -112,7 +112,7 @@ def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
             date_frame =  [dt.datetime(date.year, fes_res_data[fes_res]['month'], d).date() for d in date_range]
         
         response(
-            fes_res_data[fes_res]['response'][0 if date in date_frame else 1],
+            random.choice(fes_res_data[fes_res]['response']['fes' if date in date_frame else 'nonfes']),
             list_of_words = set(fes_res_data[fes_res]['list_of_words']), 
             single_response = fes_res_data[fes_res]['is_single_response'], 
             required_words = set(fes_res_data[fes_res]['required_word'])
@@ -122,7 +122,7 @@ def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
     
     best_match = max(highest_prob_list, key = highest_prob_list.get)
     
-    return random.choice(unknown_response) if highest_prob_list[best_match] < 1 else best_match
+    return random.choice(unknown_response) if highest_prob_list[best_match] < 1 else best_match, highest_prob_list
 
 
 def get_response(input_text: str, debug: bool = False) -> str:
@@ -143,7 +143,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
     
     is_thai = detect_thai(split_text)
 
-    response = check_all_msg(split_text, is_thai, dt.date.today())
+    (prob, response) = check_all_msg(split_text, is_thai, dt.date.today())
     
     end_timer = perf_counter()
 
@@ -151,5 +151,6 @@ def get_response(input_text: str, debug: bool = False) -> str:
         print(f'\u001b[42;1m -> \u001b[0m Incoming: {split_text}')
         print(f'\u001b[41;1m <- \u001b[0m Response with: {response}')
         print(f'\u001b[45;1m ** \u001b[0m Response time: {round((end_timer - start_timer) * 1000, 4)} ms')
+        print(prob)
         
     return response
