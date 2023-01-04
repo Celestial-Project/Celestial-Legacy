@@ -5,7 +5,8 @@
                 "Happy new year! I hope next year would be a great year!"
             ],
             "nonfes": [
-                "It's not new year yet."
+                "It's not new year yet.",
+                "I think it's not new year right now"
             ]
         },
         "list_of_words": ["happy", "new", "year"],
@@ -21,7 +22,8 @@
                 "Happy new year! I hope this year would be a great year!"
             ],
             "nonfes": [
-                "It's not new year yet."
+                "It's not new year yet.",
+                "I think it's not new year right now"
             ]
         },
         "list_of_words": ["happy", "new", "year"],
@@ -34,7 +36,8 @@
     "songkran_en": {
         "response": {
             "fes": [
-                "Songkran is here! Pls don't splash water on me."
+                "Songkran is here! Pls don't splash water on me.",
+                "Happy Songkran day!"
             ],
             "nonfes": [
                 "You want to splash some water. It's not the time for that."
