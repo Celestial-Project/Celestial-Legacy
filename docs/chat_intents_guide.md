@@ -30,10 +30,14 @@ A chat intent that outputs a cetrain message by combining datetime and keyword d
 
 ```json
 "new_year_en": {
-    "response": [
-        "Happy new year! I hope next year would be a great year!",
-        "It's not new year yet."
-    ],
+    "response": {
+        "fes": [
+            "Happy new year! I hope next year would be a great year!"
+        ],
+        "nonfes": [
+            "It's not new year yet."
+        ]
+    },
     "list_of_words": ["happy", "new", "year"],
     "is_single_response": false,
     "required_word": ["new", "year"],
@@ -42,7 +46,7 @@ A chat intent that outputs a cetrain message by combining datetime and keyword d
 }
 ```
 
-* **response**: A list of messages to which the bot will respond If the dates are the same, the bot will respond with its first response. If not, it will reply with the second response.
+* **response**: A response object with two keys, fes and nonfes, each corresponding to a list of messages. If the current date is the same as the festival date, the bot will respond with a message from the fes list. If not, it will reply with a message from the nonfes list.
 * **list_of_word**: A keyword list that you want to detect in the input message
 * **is_single_response**: Is that those keywords are only available as single words?
 * **required_word**: A list of words that must be typed in order for the response to occur.
@@ -53,10 +57,14 @@ A chat intent that outputs a cetrain message by combining datetime and keyword d
 
 ```json
 "new_year2_en": {
-    "response": [
-        "Happy new year! I hope this year would be a great year!",
-        "It's not new year yet."
-    ],
+    "response": {
+        "fes": [
+            "Happy new year! I hope next year would be a great year!"
+        ],
+        "nonfes": [
+            "It's not new year yet."
+        ]
+    },
     "list_of_words": ["happy", "new", "year"],
     "is_single_response": false,
     "required_word": ["new", "year"],
@@ -65,7 +73,7 @@ A chat intent that outputs a cetrain message by combining datetime and keyword d
 }
 ```
 
-* **response**: A list of messages to which the bot will respond If the dates are the same, the bot will respond with its first response. If not, it will reply with the second response.
+* **response**: A response object with two keys, fes and nonfes, each corresponding to a list of messages. If the current date is in festival date range, the bot will respond with a message from the fes list. If not, it will reply with a message from the nonfes list.
 * **list_of_word**: A keyword list that you want to detect in the input message
 * **is_single_response**: Is that those keywords are only available as single words?
 * **required_word**: A list of words that must be typed in order for the response to occur.

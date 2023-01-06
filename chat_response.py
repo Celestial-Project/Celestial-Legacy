@@ -112,7 +112,7 @@ def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
             date_frame =  [dt.datetime(date.year, fes_res_data[fes_res]['month'], d).date() for d in date_range]
         
         response(
-            fes_res_data[fes_res]['response'][0 if date in date_frame else 1],
+            random.choice(fes_res_data[fes_res]['response']['fes' if date in date_frame else 'nonfes']),
             list_of_words = set(fes_res_data[fes_res]['list_of_words']), 
             single_response = fes_res_data[fes_res]['is_single_response'], 
             required_words = set(fes_res_data[fes_res]['required_word'])
