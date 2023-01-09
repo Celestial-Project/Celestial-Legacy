@@ -38,7 +38,7 @@ def read_input(message: str) -> None:
 while True:
     
     try:
-        inp = input('\u001b[47;1m #> \u001b[0m ')
+        inp = input('\u001b[47;1m #> \u001b[0m ').strip()
         read_input(inp)
         
     except KeyboardInterrupt:
