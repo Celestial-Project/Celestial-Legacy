@@ -249,7 +249,7 @@
   
   "time": {
     "response": [
-      "It's $time in my timezone now. How about you?"
+      "It's $time in my timezone now (UTC $timezone). How about you?"
     ],
     "list_of_words": ["what", "time"],
     "is_single_response": false,

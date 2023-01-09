@@ -155,7 +155,8 @@ def get_response(input_text: str, debug: bool = False) -> str:
     if re.finditer(r'(?<=(?<!\{)\{)[^{}]*(?=\}(?!\}))', response, re.MULTILINE) != {}:
         response = string.Template(response).substitute(
             age = age,
-            time = current_time.strftime('%A, %d %B %Y - %H:%M:%S')
+            time = current_time.strftime('%H:%M:%S'),
+            timezone = current_time.astimezone().tzinfo
         )
     
     end_timer = perf_counter()
