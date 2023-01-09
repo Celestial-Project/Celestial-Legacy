@@ -172,7 +172,9 @@
   },
 
   "age": {
-    "response": ["Gosh... you shouldn't ask a girl age."],
+    "response": [
+      "I'm $age year old now!"
+    ],
     "list_of_words": ["how", "old", "are", "you"],
     "is_single_response": false,
     "required_word": ["old"]
@@ -243,6 +245,15 @@
     "list_of_words": ["meet","you"],
     "is_single_response": false,
     "required_word": ["meet"]
+  },
+  
+  "time": {
+    "response": [
+      "It's $time in my timezone now. How about you?"
+    ],
+    "list_of_words": ["what", "time"],
+    "is_single_response": false,
+    "required_word": ["time"]
   }
 
 }
