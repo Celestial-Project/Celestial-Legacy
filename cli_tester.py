@@ -41,6 +41,6 @@ while True:
         inp = input('\u001b[47;1m #> \u001b[0m ').strip()
         read_input(inp)
         
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, EOFError):
         print('\n\u001b[45;1m ** \u001b[0m Exiting test mode...')
         exit()
