@@ -2,15 +2,19 @@ import re
 import sys
 import json
 import random
+import string
 import pythainlp
 
 import datetime as dt
+from dateutil.relativedelta import relativedelta
 
 from time import perf_counter
 
 # check if python > 3.9
 if sys.version_info[0:2] < (3, 9):
     raise AssertionError('This project requires Python 3.9 or higher.')
+
+birthday = dt.datetime(2022, 1, 4)
 
 resp_dir = [
     './responses/responses.json',
@@ -144,6 +148,16 @@ def get_response(input_text: str, debug: bool = False) -> str:
     is_thai = detect_thai(split_text)
 
     response = check_all_msg(split_text, is_thai, dt.date.today())
+    
+    current_time = dt.datetime.now()
+    age = relativedelta(current_time, birthday).years
+    
+    if re.finditer(r'(?<=(?<!\{)\{)[^{}]*(?=\}(?!\}))', response, re.MULTILINE) != {}:
+        response = string.Template(response).substitute(
+            age = age,
+            time = current_time.strftime('%H:%M:%S'),
+            timezone = current_time.astimezone().tzinfo
+        )
     
     end_timer = perf_counter()
 

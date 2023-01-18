@@ -79,3 +79,41 @@ A chat intent that outputs a cetrain message by combining datetime and keyword d
 * **required_word**: A list of words that must be typed in order for the response to occur.
 * **date**: a date range for which the festival is held(For this example, the date range is January 1 to January 2.)
 * **month**: the month in which the festival is held.
+
+## Special variable
+
+Special variables are variables that have a predefined with the data of the bot.
+
+These special variables can be used in the response field of a JSON object to include dynamic information in the chatbot's responses.
+
+Using special variables allows the chatbot to provide more relevant and personalized responses to the user, and can make the conversation feel more dynamic and interactive.
+
+### List of variables
+
+* `$age`: The number of years since the first commit (or "birthday" of the system).
+* `$time`: The current 24-hour local time in the format "HH:MM:SS" of the server running Celestial.
+* `$timezone`: The local timezone of the server running Celestial.
+
+To implement these variables, you can use them in the response field of your JSON object, like this:
+
+```json
+"age": {
+    "response": [
+      "I'm $age year old now!"
+    ],
+    "list_of_words": ["how", "old", "are", "you"],
+    "is_single_response": false,
+    "required_word": ["old"]
+  }
+```
+
+```json
+"time": {
+    "response": [
+      "It's $time in my timezone now (UTC $timezone). How about you?"
+    ],
+    "list_of_words": ["what", "time"],
+    "is_single_response": false,
+    "required_word": ["time"]
+  }
+```
