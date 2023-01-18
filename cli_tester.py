@@ -22,6 +22,7 @@ def read_input(message: str) -> None:
             \u001b[43;1m macro \u001b[0m -h --help \t\t Show this help message.
             \u001b[43;1m macro \u001b[0m -r --reload \t Reload the chat module.
             \u001b[41;1m  ctl  \u001b[0m ^C ctrl+c \t\t Quit the program.
+            \u001b[41;1m  ctl  \u001b[0m ^D ctrl+d \t\t Quit the program.
         ''')
 
         return
@@ -41,6 +42,6 @@ while True:
         inp = input('\u001b[47;1m #> \u001b[0m ').strip()
         read_input(inp)
         
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, EOFError):
         print('\n\u001b[45;1m ** \u001b[0m Exiting test mode...')
         exit()
