@@ -52,7 +52,7 @@ def detect_thai(list_of_words: list[str]) -> bool:
     return percentage >= 50
     
 
-def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> int:
+def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> float:
 
     '''
         Calculate the probability of the sentence and return a word certainty percentage.
@@ -61,14 +61,14 @@ def msg_probability(input_text: str, reconized_word: set[str], single_response: 
     has_required_word = True
     
     message_certainty = sum(1 for word in input_text if word in reconized_word)
-    percentage = float(message_certainty) / float(len(reconized_word))
+    probability = message_certainty / len(reconized_word)
     
     for word in required_words:
         if word not in input_text:
             has_required_word = False
             break
         
-    return int(percentage * 100) if has_required_word or single_response else 0
+    return probability * 100 if has_required_word or single_response else 0
     
     
 def check_all_msg(message: list[str], is_thai: bool, date: dt.datetime) -> str:
@@ -152,7 +152,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
     current_time = dt.datetime.now()
     age = relativedelta(current_time, birthday).years
     
-    if re.finditer(r'(?<=(?<!\{)\{)[^{}]*(?=\}(?!\}))', response, re.MULTILINE) != {}:
+    if re.finditer(r'(?<=(?<!\{)\{)[^{}]*(?=\}(?!\}))', response, re.MULTILINE) != set({}):
         response = string.Template(response).substitute(
             age = age,
             time = current_time.strftime('%H:%M:%S'),
