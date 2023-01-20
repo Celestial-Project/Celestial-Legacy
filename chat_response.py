@@ -52,7 +52,7 @@ def detect_thai(list_of_words: list[str]) -> bool:
     return percentage >= 50
     
 
-def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> int:
+def msg_probability(input_text: str, reconized_word: set[str], single_response: bool = False, required_words: set[str] = []) -> float:
 
     '''
         Calculate the probability of the sentence and return a word certainty percentage.
