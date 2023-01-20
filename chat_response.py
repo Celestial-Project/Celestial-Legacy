@@ -152,7 +152,7 @@ def get_response(input_text: str, debug: bool = False) -> str:
     current_time = dt.datetime.now()
     age = relativedelta(current_time, birthday).years
     
-    if re.finditer(r'(?<=(?<!\{)\{)[^{}]*(?=\}(?!\}))', response, re.MULTILINE) != {}:
+    if re.finditer(r'(?<=(?<!\{)\{)[^{}]*(?=\}(?!\}))', response, re.MULTILINE) != set({}):
         response = string.Template(response).substitute(
             age = age,
             time = current_time.strftime('%H:%M:%S'),
