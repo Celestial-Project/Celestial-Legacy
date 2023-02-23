@@ -27,7 +27,7 @@ to send your message to the bot.
 ## Dependencies & Tools
 
 This project requires Python 3.9 or higher.
-This project uses **[Nextcord](https://github.com/nextcord/nextcord)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
+This project uses **[discord.py](https://github.com/Rapptz/discord.py)** as Discord API wrapper and **[PyThaiNLP](https://github.com/PyThaiNLP/pythainlp)** for word tokenizing.
 
 A list of dependencies can be found **[here](./requirements.txt)**.
 
