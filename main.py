@@ -19,13 +19,13 @@ client = commands.Bot(
     activity = discord.Game(name = '<!help> for more info.')
 )
 
-def is_owner(ctx: commands.Context) -> bool:
+def is_owner(interaction: discord.Interaction) -> bool:
     
     '''
         Check if the command user is authorized.
     '''
     
-    return ctx.author.id in moderator_ids
+    return interaction.user.id in moderator_ids
     
 
 @client.event
@@ -54,8 +54,8 @@ async def on_message(message: discord.Message) -> None:
     await client.process_commands(message)
     
     
-@client.command(name = 'help>')
-async def helper(ctx: commands.Context) -> None:
+@client.tree.command(name = 'help')
+async def helper(interaction: discord.Interaction) -> None:
     
     help_embed = discord.Embed(
         title = '', 
@@ -88,12 +88,12 @@ async def helper(ctx: commands.Context) -> None:
     
     help_embed.set_footer(text = '© 2022 MIT License - StrixzIV#6258, Peachpiggies#9229')
     
-    await ctx.send(embed = help_embed)
+    await interaction.response.send_message(embed = help_embed)
     
     
-@client.command(name = 'reload>')
+@client.tree.command(name = 'reload')
 @commands.check(is_owner)
-async def reload_bot(ctx: commands.Context) -> None:
+async def reload_bot(interaction: discord.Interaction) -> None:
     
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
@@ -101,11 +101,13 @@ async def reload_bot(ctx: commands.Context) -> None:
     reload(chat_response)
     
     print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
-    print(f'\u001b[45;1m ** \u001b[0m Reload command sended from {ctx.author}')
+    print(f'\u001b[45;1m ** \u001b[0m Reload command sended from {interaction.user}')
+    
+    await interaction.response.send_message('Reload completed!')
     
 
 @reload_bot.error
-async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None:
+async def on_reload_error(interaction: discord.Interaction, error: commands.errors) -> None:
     
     error_embed = discord.Embed(
         title = '⚠️ Permission Error ⚠️', 
@@ -113,13 +115,13 @@ async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None
         color = 0xFF0000
     )
     
-    print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {ctx.author} which is not an authorized user.')
-    await ctx.send(embed=error_embed)
+    print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {interaction.user} which is not an authorized user.')
+    await interaction.response.send_message(embed=error_embed)
     
     
-@client.command(name = 'pull>')
+@client.tree.command(name = 'pull')
 @commands.check(is_owner)
-async def pull(ctx: commands.Context) -> None:
+async def pull(interaction: discord.Interaction) -> None:
     
     print('\u001b[45;1m ** \u001b[0m Pulling from origin...')
     
@@ -132,11 +134,13 @@ async def pull(ctx: commands.Context) -> None:
     reload(chat_response)
     
     print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
-    print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {ctx.author}')
+    print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {interaction.user}')
+    
+    await interaction.response.send_message('Pull completed!')
     
     
 @pull.error
-async def on_pull_error(ctx: commands.Context, error: commands.errors) -> None:
+async def on_pull_error(interaction: discord.Interaction, error: commands.errors) -> None:
     
     error_embed = discord.Embed(
         title = '⚠️ Permission Error ⚠️', 
@@ -144,8 +148,8 @@ async def on_pull_error(ctx: commands.Context, error: commands.errors) -> None:
         color = 0xFF0000
     )
     
-    print(f'\u001b[41;1m !! \u001b[0m Error: Pull attempt from {ctx.author} which is not an authorized user.')
-    await ctx.send(embed=error_embed)
+    print(f'\u001b[41;1m !! \u001b[0m Error: Pull attempt from {interaction.user} which is not an authorized user.')
+    await interaction.response.send_message(embed=error_embed)
     
 
 if __name__ == '__main__':
