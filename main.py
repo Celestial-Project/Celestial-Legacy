@@ -16,7 +16,7 @@ client = commands.Bot(
     command_prefix = '::<!' if use_debug_mode else '<!', 
     intents = intents, 
     help_command = None,
-    activity = discord.Game(name = '<!help> for more info.')
+    activity = discord.Game(name = '/help for more info.')
 )
 
 def is_owner(interaction: discord.Interaction) -> bool:
