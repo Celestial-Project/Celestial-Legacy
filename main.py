@@ -54,7 +54,7 @@ async def on_message(message: discord.Message) -> None:
     await client.process_commands(message)
     
     
-@client.tree.command(name = 'help')
+@client.tree.command(name = 'help', description = 'Display a help message.')
 async def helper(interaction: discord.Interaction) -> None:
     
     help_embed = discord.Embed(
@@ -91,7 +91,7 @@ async def helper(interaction: discord.Interaction) -> None:
     await interaction.response.send_message(embed = help_embed)
     
     
-@client.tree.command(name = 'reload')
+@client.tree.command(name = 'reload', description = '*For developers only*')
 @commands.check(is_owner)
 async def reload_bot(interaction: discord.Interaction) -> None:
     
@@ -119,7 +119,7 @@ async def on_reload_error(interaction: discord.Interaction, error: commands.erro
     await interaction.response.send_message(embed=error_embed)
     
     
-@client.tree.command(name = 'pull')
+@client.tree.command(name = 'pull', description = '*For developers only*') 
 @commands.check(is_owner)
 async def pull(interaction: discord.Interaction) -> None:
     
