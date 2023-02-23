@@ -1,13 +1,13 @@
 import os
 import git 
-import nextcord
+import discord
 import chat_response
 from dotenv import load_dotenv
-from nextcord.ext import commands
+from discord.ext import commands
 from dotenv import load_dotenv
 from importlib import reload
 
-intents = nextcord.Intents.default()
+intents = discord.Intents.default()
 intents.message_content = True
 
 use_debug_mode = False
@@ -16,7 +16,7 @@ client = commands.Bot(
     command_prefix = '::<!' if use_debug_mode else '<!', 
     intents = intents, 
     help_command = None,
-    activity = nextcord.Game(name = '<!help> for more info.')
+    activity = discord.Game(name = '<!help> for more info.')
 )
 
 def is_owner(ctx: commands.Context) -> bool:
@@ -36,7 +36,7 @@ async def on_ready() -> None:
 
 
 @client.event
-async def on_message(message: nextcord.Message) -> None:
+async def on_message(message: discord.Message) -> None:
 
     if message.content.startswith('<usr>'):
         chat_message = message.content.split('<usr>')[1].strip()
@@ -48,7 +48,7 @@ async def on_message(message: nextcord.Message) -> None:
 @client.command(name = 'help>')
 async def helper(ctx: commands.Context) -> None:
     
-    help_embed = nextcord.Embed(
+    help_embed = discord.Embed(
         title = '', 
         description = 'a Python Discord chat bot who can talk with you in English and Thai.', 
         color = 0xd357fe
@@ -98,7 +98,7 @@ async def reload_bot(ctx: commands.Context) -> None:
 @reload_bot.error
 async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None:
     
-    error_embed = nextcord.Embed(
+    error_embed = discord.Embed(
         title = '⚠️ Permission Error ⚠️', 
         description = 'Reload attempt from non-authorized user.', 
         color = 0xFF0000
@@ -129,7 +129,7 @@ async def pull(ctx: commands.Context) -> None:
 @pull.error
 async def on_pull_error(ctx: commands.Context, error: commands.errors) -> None:
     
-    error_embed = nextcord.Embed(
+    error_embed = discord.Embed(
         title = '⚠️ Permission Error ⚠️', 
         description = 'Pull attempt from non-authorized user.', 
         color = 0xFF0000
