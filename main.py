@@ -1,16 +1,20 @@
 import os
 import git 
 import discord
+import argparse
 import chat_response
+
+from importlib import reload
 from dotenv import load_dotenv
 from discord.ext import commands
-from dotenv import load_dotenv
-from importlib import reload
+
+flags_parser = argparse.ArgumentParser()
+flags_parser.add_argument('-d', '--debug', action='store_true')
+
+use_debug_mode = flags_parser.parse_args().debug
 
 intents = discord.Intents.default()
 intents.message_content = True
-
-use_debug_mode = False
 
 client = commands.Bot(
     command_prefix = '::<!' if use_debug_mode else '<!', 
