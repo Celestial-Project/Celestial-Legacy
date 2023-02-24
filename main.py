@@ -1,46 +1,55 @@
 import os
 import git 
+import discord
 import argparse
-import nextcord
 import chat_response
 
 from importlib import reload
 from dotenv import load_dotenv
-from nextcord.ext import commands
+from discord.ext import commands
 
 flags_parser = argparse.ArgumentParser()
 flags_parser.add_argument('-d', '--debug', action='store_true')
 
 use_debug_mode = flags_parser.parse_args().debug
 
-intents = nextcord.Intents.default()
+intents = discord.Intents.default()
 intents.message_content = True
 
 client = commands.Bot(
     command_prefix = '::<!' if use_debug_mode else '<!', 
     intents = intents, 
     help_command = None,
-    activity = nextcord.Game(name = '<!help> for more info.')
+    activity = discord.Game(name = '/help for more info.')
 )
 
-def is_owner(ctx: commands.Context) -> bool:
+def is_owner(interaction: discord.Interaction) -> bool:
     
     '''
         Check if the command user is authorized.
     '''
     
-    return ctx.author.id in moderator_ids
+    return interaction.user.id in moderator_ids
     
 
 @client.event
 async def on_ready() -> None:
+    
     os.system('cls' if os.name == 'nt' else 'clear')
+    
+    try:
+        synced = await client.tree.sync()
+        print(f'\u001b[45;1m ** \u001b[0m Synced: {len(synced)} commands' if len(synced) != 1 else f'\u001b[45;1m ** \u001b[0m Synced: {len(synced)} command')
+        
+    except Exception as e:
+        print(f'\u001b[41;1m !! \u001b[0m Exception detected: \n{e}')
+    
     print(f'\u001b[45;1m ** \u001b[0m Status: {"Debug" if use_debug_mode else "Production"}')
     print(f'\u001b[45;1m ** \u001b[0m Successfully logged in as: {client.user}')
 
 
 @client.event
-async def on_message(message: nextcord.Message) -> None:
+async def on_message(message: discord.Message) -> None:
 
     if message.content.startswith('<usr>'):
         chat_message = message.content.split('<usr>')[1].strip()
@@ -49,10 +58,10 @@ async def on_message(message: nextcord.Message) -> None:
     await client.process_commands(message)
     
     
-@client.command(name = 'help>')
-async def helper(ctx: commands.Context) -> None:
+@client.tree.command(name = 'help', description = 'Display a help message.')
+async def helper(interaction: discord.Interaction) -> None:
     
-    help_embed = nextcord.Embed(
+    help_embed = discord.Embed(
         title = '', 
         description = 'a Python Discord chat bot who can talk with you in English and Thai.', 
         color = 0xd357fe
@@ -83,12 +92,12 @@ async def helper(ctx: commands.Context) -> None:
     
     help_embed.set_footer(text = '© 2022 MIT License - StrixzIV#6258, Peachpiggies#9229')
     
-    await ctx.send(embed = help_embed)
+    await interaction.response.send_message(embed = help_embed)
     
     
-@client.command(name = 'reload>')
+@client.tree.command(name = 'reload', description = '*For developers only*')
 @commands.check(is_owner)
-async def reload_bot(ctx: commands.Context) -> None:
+async def reload_bot(interaction: discord.Interaction) -> None:
     
     os.system('cls' if os.name == 'nt' else 'clear')
     print('\u001b[45;1m ** \u001b[0m Reloading...')
@@ -96,25 +105,27 @@ async def reload_bot(ctx: commands.Context) -> None:
     reload(chat_response)
     
     print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
-    print(f'\u001b[45;1m ** \u001b[0m Reload command sended from {ctx.author}')
+    print(f'\u001b[45;1m ** \u001b[0m Reload command sended from {interaction.user}')
+    
+    await interaction.response.send_message('Reload completed!')
     
 
 @reload_bot.error
-async def on_reload_error(ctx: commands.Context, error: commands.errors) -> None:
+async def on_reload_error(interaction: discord.Interaction, error: commands.errors) -> None:
     
-    error_embed = nextcord.Embed(
+    error_embed = discord.Embed(
         title = '⚠️ Permission Error ⚠️', 
         description = 'Reload attempt from non-authorized user.', 
         color = 0xFF0000
     )
     
-    print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {ctx.author} which is not an authorized user.')
-    await ctx.send(embed=error_embed)
+    print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {interaction.user} which is not an authorized user.')
+    await interaction.response.send_message(embed=error_embed)
     
     
-@client.command(name = 'pull>')
+@client.tree.command(name = 'pull', description = '*For developers only*') 
 @commands.check(is_owner)
-async def pull(ctx: commands.Context) -> None:
+async def pull(interaction: discord.Interaction) -> None:
     
     print('\u001b[45;1m ** \u001b[0m Pulling from origin...')
     
@@ -127,20 +138,22 @@ async def pull(ctx: commands.Context) -> None:
     reload(chat_response)
     
     print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
-    print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {ctx.author}')
+    print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {interaction.user}')
+    
+    await interaction.response.send_message('Pull completed!')
     
     
 @pull.error
-async def on_pull_error(ctx: commands.Context, error: commands.errors) -> None:
+async def on_pull_error(interaction: discord.Interaction, error: commands.errors) -> None:
     
-    error_embed = nextcord.Embed(
+    error_embed = discord.Embed(
         title = '⚠️ Permission Error ⚠️', 
         description = 'Pull attempt from non-authorized user.', 
         color = 0xFF0000
     )
     
-    print(f'\u001b[41;1m !! \u001b[0m Error: Pull attempt from {ctx.author} which is not an authorized user.')
-    await ctx.send(embed=error_embed)
+    print(f'\u001b[41;1m !! \u001b[0m Error: Pull attempt from {interaction.user} which is not an authorized user.')
+    await interaction.response.send_message(embed=error_embed)
     
 
 if __name__ == '__main__':
