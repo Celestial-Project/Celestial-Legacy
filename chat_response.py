@@ -6,9 +6,11 @@ import string
 import pythainlp
 
 import datetime as dt
-from dateutil.relativedelta import relativedelta
 
 from time import perf_counter
+from dateutil.relativedelta import relativedelta
+
+from utils.logger import info_log, incoming_log, outgoing_log
 
 # check if python > 3.9
 if sys.version_info[0:2] < (3, 9):
@@ -162,8 +164,8 @@ def get_response(input_text: str, debug: bool = False) -> str:
     end_timer = perf_counter()
 
     if debug:
-        print(f'\u001b[42;1m -> \u001b[0m Incoming: {split_text}')
-        print(f'\u001b[41;1m <- \u001b[0m Response with: {response}')
-        print(f'\u001b[45;1m ** \u001b[0m Response time: {round((end_timer - start_timer) * 1000, 4)} ms')
+        incoming_log(f'Incoming: {split_text}')
+        outgoing_log(f'Response with: {response}')
+        info_log(f'Response time: {round((end_timer - start_timer) * 1000, 4)} ms')
         
     return response

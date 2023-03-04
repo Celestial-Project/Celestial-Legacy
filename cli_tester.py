@@ -1,12 +1,14 @@
 import os 
 import chat_response
+
 from importlib import reload
+from utils.logger import info_log
 
 # run this file to test your chat intents on the terminal before commit
 
-print('\u001b[45;1m ** \u001b[0m Welcome to Celestial command-line testing interface!')
-print('\u001b[45;1m ** \u001b[0m Type -h or --help to see list of test macro and controls.')
-print('\u001b[45;1m ** \u001b[0m Press ctrl+c to exit.')
+info_log('Welcome to Celestial command-line testing interface!')
+info_log('Type -h or --help to see list of test macro and controls.')
+info_log('Press ctrl+c to exit.')
 
 def read_input(message: str) -> None:
 
@@ -29,7 +31,7 @@ def read_input(message: str) -> None:
 
     elif message in {'--reload', '-r'}:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print('\u001b[45;1m ** \u001b[0m Reloading...')
+        info_log('Reloading...')
         reload(chat_response)
         return
                   
@@ -43,5 +45,6 @@ while True:
         read_input(inp)
         
     except (KeyboardInterrupt, EOFError):
-        print('\n\u001b[45;1m ** \u001b[0m Exiting test mode...')
+        print()
+        info_log('Exiting test mode...')
         exit()

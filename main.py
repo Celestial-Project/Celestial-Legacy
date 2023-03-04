@@ -8,6 +8,8 @@ from importlib import reload
 from dotenv import load_dotenv
 from discord.ext import commands
 
+from utils.logger import info_log, error_log
+
 flags_parser = argparse.ArgumentParser()
 flags_parser.add_argument('-d', '--debug', action='store_true')
 
@@ -39,13 +41,13 @@ async def on_ready() -> None:
     
     try:
         synced = await client.tree.sync()
-        print(f'\u001b[45;1m ** \u001b[0m Synced: {len(synced)} commands' if len(synced) != 1 else f'\u001b[45;1m ** \u001b[0m Synced: {len(synced)} command')
+        info_log(f'Synced: {len(synced)} commands' if len(synced) != 1 else f'Synced: {len(synced)} command')
         
     except Exception as e:
-        print(f'\u001b[41;1m !! \u001b[0m Exception detected: \n{e}')
+        error_log(f'Exception detected: \n{e}')
     
-    print(f'\u001b[45;1m ** \u001b[0m Status: {"Debug" if use_debug_mode else "Production"}')
-    print(f'\u001b[45;1m ** \u001b[0m Successfully logged in as: {client.user}')
+    info_log(f'Status: {"Debug" if use_debug_mode else "Production"}')
+    info_log(f'Successfully logged in as: {client.user}')
 
 
 @client.event
@@ -100,12 +102,12 @@ async def helper(interaction: discord.Interaction) -> None:
 async def reload_bot(interaction: discord.Interaction) -> None:
     
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('\u001b[45;1m ** \u001b[0m Reloading...')
+    info_log('Reloading...')
     
     reload(chat_response)
     
-    print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
-    print(f'\u001b[45;1m ** \u001b[0m Reload command sended from {interaction.user}')
+    info_log('Chat module reload successfully!')
+    info_log(f'Reload command sended from {interaction.user}')
     
     await interaction.response.send_message('Reload completed!')
     
@@ -119,7 +121,7 @@ async def on_reload_error(interaction: discord.Interaction, error: commands.erro
         color = 0xFF0000
     )
     
-    print(f'\u001b[41;1m !! \u001b[0m Error: Reload attempt from {interaction.user} which is not an authorized user.')
+    error_log(f'Error: Reload attempt from {interaction.user} which is not an authorized user.')
     await interaction.response.send_message(embed=error_embed)
     
     
@@ -127,18 +129,18 @@ async def on_reload_error(interaction: discord.Interaction, error: commands.erro
 @commands.check(is_owner)
 async def pull(interaction: discord.Interaction) -> None:
     
-    print('\u001b[45;1m ** \u001b[0m Pulling from origin...')
+    info_log('Pulling from origin...')
     
     repo = git.Repo(os.getcwd())
     repo.remote('origin').pull()
     
-    print('\u001b[45;1m ** \u001b[0m Pull complete.')
-    print('\u001b[45;1m ** \u001b[0m Reloading chat module...')
+    info_log('Pull complete.')
+    info_log('Reloading chat module...')
     
     reload(chat_response)
     
-    print('\u001b[45;1m ** \u001b[0m Chat module reload successfully!')
-    print(f'\u001b[45;1m ** \u001b[0m Pull command sended from {interaction.user}')
+    info_log('Chat module reload successfully!')
+    info_log(f'Pull command sended from {interaction.user}')
     
     await interaction.response.send_message('Pull completed!')
     
@@ -152,7 +154,7 @@ async def on_pull_error(interaction: discord.Interaction, error: commands.errors
         color = 0xFF0000
     )
     
-    print(f'\u001b[41;1m !! \u001b[0m Error: Pull attempt from {interaction.user} which is not an authorized user.')
+    error_log(f'Error: Pull attempt from {interaction.user} which is not an authorized user.')
     await interaction.response.send_message(embed=error_embed)
     
 
