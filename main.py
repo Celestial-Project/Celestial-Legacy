@@ -8,7 +8,7 @@ from importlib import reload
 from dotenv import load_dotenv
 from discord.ext import commands
 
-from utils.logger import info_log, error_log
+from logger import info_log, error_log
 
 flags_parser = argparse.ArgumentParser()
 flags_parser.add_argument('-d', '--debug', action='store_true')
