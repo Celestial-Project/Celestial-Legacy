@@ -1,4 +1,6 @@
 import os
+import argparse
+
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
@@ -8,7 +10,12 @@ from flask_limiter.util import get_remote_address
 from logger import info_log
 from chat_response import get_response
 
-debug = False
+flags_parser = argparse.ArgumentParser()
+flags_parser.add_argument('-p', '--port', nargs = '?', default = 21250, type = int)
+flags_parser.add_argument('-d', '--debug', action = 'store_true')
+
+debug = flags_parser.parse_args().debug
+PORT = flags_parser.parse_args().port
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -40,8 +47,6 @@ def send_response():
 
 
 def main():
-
-    PORT = 21250
 
     if debug:  
 
