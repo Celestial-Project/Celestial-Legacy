@@ -35,7 +35,7 @@ def show_ready(port: int, debug: bool) -> None:
 
 @cross_origin()
 @limiter.limit('450/minute')
-@app.route('/celestial-api', methods = ['POST'])
+@app.route('/chat-legacy', methods = ['POST'])
 def send_response():
     
     body = request.get_json()
