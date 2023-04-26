@@ -65,5 +65,23 @@
         "required_word": ["วาเลนไทน์"],
         "date": 14,
         "month": 2
+    },
+
+    "halloween": {
+        "required": {
+            "fes": [
+                "Trick or Treat! ถ้าไม่อยากโดนแกล้งต้องให้ขนมหนูนะ",
+                "บู่! ฮาโลวีนมาแล้ว"
+            ],
+            "nonfes": [
+                "ผิดวันแล้วค่ะคุณพี่ เก็บชุดก่อนเลยค่ะแต่ให้ขนมหนูได้นะคะ"
+            ]
+        },
+        "list_of_words": ["ฮาโลวีน"],
+        "is_single_response": false,
+        "required_word": ["ฮาโลวีน"],
+        "date": 31,
+        "month": 10
     }
+
 }
