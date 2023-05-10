@@ -96,13 +96,13 @@ async def helper(interaction: discord.Interaction) -> None:
     
     help_embed.add_field(
         name = 'Report Issue', 
-        value = 'If there is a problem with the bot response or any bug with the bot, \nfeel free to report us at: \n**https://github.com/Celestial-Project/Celestial-Legacy/issues/new/choose**', 
+        value = 'If there is a problem with the bot response or any bug with the bot, feel free to **[report](https://github.com/Celestial-Project/Celestial-Legacy/issues/new/choose)** those problems to us.', 
         inline = True
     )
     
     help_embed.add_field(
         name = 'Development & Update', 
-        value = 'Follow the latest update at: \n**https://github.com/Celestial-Project/Celestial-Legacy**', 
+        value = 'Follow the latest update on our **[Github repository](https://github.com/Celestial-Project/Celestial-Legacy)**.', 
         inline = False
     )
     
