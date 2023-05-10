@@ -53,13 +53,27 @@ async def on_ready() -> None:
 @client.event
 async def on_message(message: discord.Message) -> None:
 
-    if message.content.startswith('<usr>'):
-        chat_message = message.content.split('<usr>')[1].strip()
+    if message.channel.name == 'legacy-celestial-chat' and message.author != client.user:
+        chat_message = message.content.strip()
         await message.channel.send(chat_response.get_response(chat_message, debug = use_debug_mode))
 
     await client.process_commands(message)
+
+
+@client.tree.command(name = 'setup-chat', description = 'Setup a text channel for Celestial chat.')
+async def setup_chat(interaction: discord.Interaction) -> None:
     
+    guild = interaction.guild
+    channel_list = [ch.name for ch in guild.text_channels]
     
+    if 'legacy-celestial-chat' in channel_list:
+        await interaction.response.send_message('Celestial text channel is already existed.')
+        return
+    
+    await guild.create_text_channel('legacy-celestial-chat')
+    await interaction.response.send_message('Setup complete!')
+
+
 @client.tree.command(name = 'help', description = 'Display a help message.')
 async def helper(interaction: discord.Interaction) -> None:
     
