@@ -10,15 +10,11 @@ You can find the full documentation for the corpus **[here](https://arxiv.org/pd
 
 Invite our bot **[here](https://discord.com/api/oauth2/authorize?client_id=927573556961869825&permissions=283669424144&scope=bot)**.
 
-## Usage
+## How to use
 
-You can talk to the bot by DM the bot or invite the bot to your server and type
+To use this bot, you first need to set up a dedicated text channel where the bot can interact with users. To create chat channel, simply use `/setup-chat`.
 
-```txt
-<usr> your message goes here
-```
-
-to send your message to the bot.
+For more information about the bot, use `/help`.
 
 ### Examples
 
