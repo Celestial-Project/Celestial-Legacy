@@ -50,7 +50,7 @@
         "month": 4
     },
 
-    "valentine": {
+    "valentine_en": {
         "response": {
             "fes": [
                 "Valentine is here! I wish for you to find your love.",
@@ -67,7 +67,7 @@
         "month": 2
     },
 
-    "halloween": {
+    "halloween_en": {
         "required": {
             "fes": [
                 "Trick or Treat! If you don't want to get trick, you have to give me candies!",
@@ -82,6 +82,18 @@
         "required_word": ["halloween"],
         "date": 31,
         "month": 10
+    },
+
+    "christmast_en": {
+        "required": {
+            "fes": ["It's already Christmest, but I don't have any presents for you."],
+            "nonfes": ["Sorry I don't have any presents for you. .w."]
+        },
+        "list_of_words": ["Christmas"],
+        "is_single_response": false,
+        "required_word": ["Christmas"],
+        "date": 25,
+        "month": 12
     }
 
 }
