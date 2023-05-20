@@ -84,14 +84,14 @@
         "month": 10
     },
 
-    "christmast_en": {
+    "christmas_en": {
         "required": {
-            "fes": ["It's already Christmest, but I don't have any presents for you."],
+            "fes": ["It's already Christmas, but I don't have any presents for you."],
             "nonfes": ["Sorry I don't have any presents for you. .w."]
         },
-        "list_of_words": ["Christmas"],
+        "list_of_words": ["christmas"],
         "is_single_response": false,
-        "required_word": ["Christmas"],
+        "required_word": ["christmas"],
         "date": 25,
         "month": 12
     }
