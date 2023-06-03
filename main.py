@@ -43,11 +43,11 @@ async def on_ready() -> None:
     
     try:
         synced = await client.tree.sync()
-        info_log(f'Synced: {len(synced)} commands' if len(synced) != 1 else f'Synced: {len(synced)} command')
         
     except Exception as e:
         error_log(f'Exception detected: \n{e}')
     
+    info_log(f'Synced: {len(synced)} commands' if len(synced) != 1 else f'Synced: {len(synced)} command')
     info_log(f'Status: {"Debug" if use_debug_mode else "Production"}')
     info_log(f'Successfully logged in as: {client.user}')
 
