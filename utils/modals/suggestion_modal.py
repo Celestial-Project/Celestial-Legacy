@@ -18,5 +18,5 @@ class SuggestionsModal(ui.Modal, title = 'Suggest a new response for us!'):
 
         user = interaction.user.name
 
-        self.__db.add_suggestion('dl_suggestions', user, self.bot_input.value, self.responses.value, self.notes.value)        
+        self.__db.add_suggestion('legacy_suggestions', user, self.bot_input.value, self.responses.value, self.notes.value)        
         await interaction.response.send_message('Thank you for suggestion!')
