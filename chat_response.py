@@ -10,7 +10,7 @@ import datetime as dt
 from time import perf_counter
 from dateutil.relativedelta import relativedelta
 
-from logger import info_log, incoming_log, outgoing_log
+from utils.logger import info_log, incoming_log, outgoing_log
 
 # check if python > 3.9
 if sys.version_info[0:2] < (3, 9):

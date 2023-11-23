@@ -1,6 +1,6 @@
 import json
 
-from utils import move_pwd_up
+from test_utils import move_pwd_up
 
 move_pwd_up()
 

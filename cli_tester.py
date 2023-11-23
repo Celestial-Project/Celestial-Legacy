@@ -2,7 +2,7 @@ import os
 import chat_response
 
 from importlib import reload
-from logger import info_log
+from utils.logger import info_log
 
 # run this file to test your chat intents on the terminal before commit
 

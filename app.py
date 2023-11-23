@@ -7,7 +7,7 @@ from flask_cors import CORS, cross_origin
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
-from logger import info_log
+from utils.logger import info_log
 from chat_response import get_response
 
 flags_parser = argparse.ArgumentParser()
