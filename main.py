@@ -8,7 +8,9 @@ from importlib import reload
 from dotenv import load_dotenv
 from discord.ext import commands
 
+import utils.database
 from utils.logger import info_log, error_log
+from utils.modals.suggestion_modal import SuggestionsModal
 
 flags_parser = argparse.ArgumentParser()
 flags_parser.add_argument('-d', '--debug', action='store_true')
@@ -74,6 +76,11 @@ async def setup_chat(interaction: discord.Interaction) -> None:
     
     await guild.create_text_channel(bot_channel_name)
     await interaction.response.send_message('Setup complete!')
+
+
+@client.tree.command(name = 'suggestion', description = 'Suggest a new intents for next version.')
+async def suggestion(interaction: discord.Interaction) -> None:
+    await interaction.response.send_modal(SuggestionsModal(suggestion_db))
 
 
 @client.tree.command(name = 'help', description = 'Display a help message.')
@@ -178,5 +185,8 @@ if __name__ == '__main__':
 
     load_dotenv()
     moderator_ids = set([int(ids) for (key, ids) in os.environ.items() if key.startswith('ID')])
+
+    db_connection = utils.database.create_database_connection(os.getenv('DB_HOST'), os.getenv('DB_USER'), os.getenv('DB_PASS'))
+    suggestion_db = utils.database.SuggestionDatabase(db_connection)
     
     client.run(os.getenv('TOKEN'))
