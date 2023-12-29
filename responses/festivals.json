@@ -68,7 +68,7 @@
     },
 
     "halloween_en": {
-        "required": {
+        "response": {
             "fes": [
                 "Trick or Treat! If you don't want to get trick, you have to give me candies!",
                 "Booh! It's Halloween!"
@@ -85,7 +85,7 @@
     },
 
     "christmas_en": {
-        "required": {
+        "response": {
             "fes": ["It's already Christmas, but I don't have any presents for you."],
             "nonfes": ["Sorry I don't have any presents for you. .w."]
         },
