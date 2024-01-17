@@ -1,7 +1,14 @@
 import os
 import sys
+import json
 import inspect
 
+
+def load_json(filename: str) -> dict:
+    with open(filename, encoding = 'utf-8') as f:
+        return json.load(f)
+    
+    
 def move_pwd_up() -> None:
     
     '''
